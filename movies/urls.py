@@ -3,5 +3,5 @@ from . import views
 
 app_name = 'movies'
 urlpatterns = [
- path('download/', views.download),
+    path('download/', views.download)
 ]

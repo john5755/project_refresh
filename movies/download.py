@@ -1,24 +1,7 @@
-from django.shortcuts import render
 import requests
 from .models import Movie, MovieGenre
 
-# Create your views here.
-
-
-
-
-'''
-User Tag Reset 요청 시
-1. (user1_tag == user_tag, user2_tag == partner_tag) | (user1_tag == partner_tag, user2_tag == user_tag)
-2. login_date가 가장 오래된 것 찾기 (first_date)
-3. login_date가 first_date 이후이면서 (user1_tag == partner_tag) | (user2_tag == partner_tag) 개수 count
-4. 개수 보여줌
-5. history에서 (user1_tag == user_tag) | (user2_tag == user_tag) 인 자료들 모두 삭제
-6. user_tag 값 변경
-
-'''
-
-def download(request):
+def download():
     BASE_URL = 'https://api.themoviedb.org/3'
     path = '/movie/popular'
     api_key = '77c1acb7ecfe2934617865f7edb08c4d'
@@ -57,9 +40,9 @@ def download(request):
         runtime = movie['runtime']
         for genre in movie['genres']:
             genre_name = genre['name']
-            moviegenre = MovieGenre(movie_id=movie_id, genre_name=genre_name)
-            moviegenre.save()
-        movie = Movie(
+            MovieGenre(movie_id=movie_id, genre_name=genre_name)
+            MovieGenre.save()
+        Movie(
             movie_id = movie_id,
             poster_path = poster_path,
             overview = overview,
@@ -70,4 +53,4 @@ def download(request):
             runtime = runtime,
             release_date = release_date
         )
-        movie.save()
+        Movie.save()
