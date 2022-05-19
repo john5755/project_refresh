@@ -1,11 +1,31 @@
-from django.shortcuts import render, get_list_or_404
+from django.shortcuts import get_object_or_404, render, get_list_or_404
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serializers import MovieListSerializer, MovieSerializer
+
 import requests
-from .models import Movie, MovieGenre, Cast, Provider
+from .models import Movie, Genre ,Cast, Provider
 
 # Create your views here.
 
+@api_view(['GET'])
+def movie_list(request):
+    # movies = get_list_or_404(Movie)[:5]
+    movies = Movie.objects.order_by('-pk')[:5]
+    serializer = MovieListSerializer(movies, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def movie_detail(request, movie_id):
+    movie = get_object_or_404(Movie, movie_id=movie_id)
+    serializer = MovieSerializer(movie)
+    print(type(serializer))
+    return Response(serializer.data)
 
 
+
+# database 관련 함수
 
 '''
 User Tag Reset 요청 시
@@ -26,7 +46,7 @@ def download(request):
     
 
     movie_ids = []
-    for page in range(1,3):
+    for page in range(1,6):
         params = {
             'api_key' : api_key,
             'language' : 'ko',
@@ -57,11 +77,7 @@ def download(request):
         vote_average = movie['vote_average']
         release_date = movie['release_date']
         runtime = movie['runtime']
-        for genre in movie['genres']:
-            genre_name = genre['name']
-            moviegenre = MovieGenre(movie_id=movie_id, genre_name=genre_name)
-            moviegenre.save()
-        movie = Movie(
+        movie_now = Movie(
             movie_id = movie_id,
             poster_path = poster_path,
             overview = overview,
@@ -72,7 +88,18 @@ def download(request):
             runtime = runtime,
             release_date = release_date
         )
-        movie.save()
+        movie_now.save()
+        for genre in movie['genres']:
+            genre_name = Genre.objects.get(genre_name=genre['name'])
+            genre_name.movies.add(movie_now)
+            genre_name.save()
+
+'''
+        for provider in providers:
+            provider_name = Provider.objects.get(provider_name = provider['provider_name'])
+            provider_name.movies.add(movie)
+            provider_name.save()
+'''
 
 
 def cast(request):

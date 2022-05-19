@@ -16,11 +16,10 @@ class Movie(models.Model):
     runtime = models.IntegerField()
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
 
-class MovieGenre(models.Model):
+class Genre(models.Model):
 
-    movie_id = models.IntegerField()
-    genre_name = models.CharField(max_length=20)
-
+    genre_name = models.CharField(max_length=100)
+    movies = models.ManyToManyField(Movie, related_name='genres')
 
 class Cast(models.Model):
 
