@@ -1,5 +1,5 @@
-from platform import release
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 
@@ -14,12 +14,31 @@ class Movie(models.Model):
     overview = models.TextField()
     release_date = models.TextField()
     runtime = models.IntegerField()
+    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
 
 class MovieGenre(models.Model):
 
     movie_id = models.IntegerField()
     genre_name = models.CharField(max_length=20)
 
+
+class Cast(models.Model):
+
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    actor_name = models.CharField(max_length=100)
+    character = models.CharField(max_length=100)
+
+class Provider(models.Model):
+
+    provider_name = models.CharField(max_length=100)
+    movies = models.ManyToManyField(Movie, related_name='providers')
+
+class Comment(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='comments')
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='comments')
+    content = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 '''

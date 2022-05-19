@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 import requests
-from .models import Movie, MovieGenre
+from .models import Movie, MovieGenre, Cast, Provider
 
 # Create your views here.
 
@@ -17,11 +17,13 @@ User Tag Reset 요청 시
 6. user_tag 값 변경
 
 '''
+BASE_URL = 'https://api.themoviedb.org/3'
+api_key = '77c1acb7ecfe2934617865f7edb08c4d'
 
 def download(request):
-    BASE_URL = 'https://api.themoviedb.org/3'
+    
     path = '/movie/popular'
-    api_key = '77c1acb7ecfe2934617865f7edb08c4d'
+    
 
     movie_ids = []
     for page in range(1,3):
@@ -71,3 +73,53 @@ def download(request):
             release_date = release_date
         )
         movie.save()
+
+
+def cast(request):
+    movies = get_list_or_404(Movie)
+    BASE_URL = 'https://api.themoviedb.org/3'
+    params = {
+    'api_key' : '77c1acb7ecfe2934617865f7edb08c4d',
+    'language' : 'ko',
+    }
+    for movie in movies:
+
+        movie_id = movie.movie_id
+        path = f'/movie/{movie_id}/credits'
+        response = requests.get(BASE_URL + path, params = params)
+        casts = response.json()['cast']
+        for cast in casts:
+            actor_name = cast['original_name']
+            character = cast['character']
+            actor = Cast(movie=movie, actor_name=actor_name, character=character)
+            actor.save()
+
+def provider(request):
+    path = '/watch/providers/movie'
+    params = {
+        'api_key' : api_key,
+        'language' : 'ko',
+        'watch_region' : 'KR'
+    }
+    response = requests.get(BASE_URL + path, params=params)
+    providers = response.json()['results']
+    for provider in providers:
+        provider_name = provider['provider_name']
+        provider = Provider(provider_name=provider_name)
+        provider.save()
+
+def providerlink(request):
+    movies = get_list_or_404(Movie)
+    params = {
+    'api_key' : '77c1acb7ecfe2934617865f7edb08c4d',
+    }
+    for movie in movies:
+        movie_id = movie.movie_id
+        path = f'/movie/{movie_id}/watch/providers'
+        response = requests.get(BASE_URL + path, params = params)
+        providers = response.json()['results'].get('KR',{}).get('flatrate',[])
+        for provider in providers:
+            provider_name = Provider.objects.get(provider_name = provider['provider_name'])
+            provider_name.movies.add(movie)
+            provider_name.save()
+        
