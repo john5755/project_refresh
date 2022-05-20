@@ -74,7 +74,6 @@ def download(request):
         original_title = movie['original_title']
         title = movie['title']
         tagline = movie['tagline']
-        vote_average = movie['vote_average']
         release_date = movie['release_date']
         runtime = movie['runtime']
         movie_now = Movie(
@@ -84,7 +83,6 @@ def download(request):
             original_title = original_title,
             title = title,
             tagline = tagline,
-            vote_average= vote_average,
             runtime = runtime,
             release_date = release_date
         )
@@ -149,4 +147,16 @@ def providerlink(request):
             provider_name = Provider.objects.get(provider_name = provider['provider_name'])
             provider_name.movies.add(movie)
             provider_name.save()
-        
+
+def genre(request):
+    path = '/genre/movie/list'
+    params = {
+        'api_key' : api_key,
+        'language' : 'ko',
+    }
+    response = requests.get(BASE_URL + path, params=params)
+    genres = response.json()['genres']
+    for genre in genres:
+        genre_name = genre['name']
+        genre = Genre(genre_name=genre_name)
+        genre.save()

@@ -10,11 +10,16 @@ class Movie(models.Model):
     original_title = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     tagline = models.TextField()
-    vote_average = models.FloatField()
     overview = models.TextField()
     release_date = models.TextField()
     runtime = models.IntegerField()
-    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
+    rate_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='rate_movies', through='Rate')
+
+class Rate(models.Model):
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    bgm_rate = models.IntegerField()
 
 class Genre(models.Model):
 
