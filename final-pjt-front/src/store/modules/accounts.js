@@ -65,7 +65,7 @@ export default {
     },
 
     savePartnerLoggedIn({ commit }, partnerPk) {
-      commit('SET_PARTNER_LOGGEND_IN', partnerPk)
+      commit('SET_PARTNER_LOGGED_IN', partnerPk)
     },
 
     removeUserLoggedIn({ commit }) {
@@ -73,7 +73,7 @@ export default {
     },
 
     removePartnerLoggedIn({ commit }) {
-      commit('SET_PARTNER_LOGGEND_IN', '')
+      commit('SET_PARTNER_LOGGND_IN', '')
     },
 
 
@@ -96,7 +96,8 @@ export default {
             const token = res.data.key
             dispatch('saveToken', token)
             dispatch('fetchCurrentUser')
-            dispatch('logout')
+            console.log(getters.userLoggedIn)
+            // dispatch('logout')
             // router.push({ name: 'login' })
             
           })
@@ -104,6 +105,9 @@ export default {
             console.error(err.response.data)
             commit('SET_AUTH_ERROR', err.response.data)
           })
+          // .finally( function(){
+          //   dispatch('logout')
+          // })
           
 
       }else if (getters.userLoggedIn && !getters.partnerLoggedIn){
@@ -233,7 +237,7 @@ export default {
                commit('SET_USER_LOGGEND_IN',res.data.pk)
               
               }else {
-                commit('SET_PARTNER_LOGGEND_IN',res.data.pk)
+                commit('SET_PARTNER_LOGGED_IN',res.data.pk)
               }})
 
           .catch(err => {
