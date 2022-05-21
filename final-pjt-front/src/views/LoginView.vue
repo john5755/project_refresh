@@ -1,10 +1,16 @@
 <template>
   <div>
-    <h1>Login</h1>
+    <h1 v-if="!isLoggedIn" >Login</h1>
+    <h1 v-if="userLoggedIn">Partner Login</h1>
 
     <account-error-list v-if="authError"></account-error-list>
 
-
+    <div v-if="userLoggedIn">
+      <router-link :to="{ name: 'profile', params: { username } }">
+        {{ currentUser.username }} 프로필수정
+      </router-link>
+    </div>
+    
     <form @submit.prevent="login(credentials)">
       <div>
         <label for="username">username: </label>
@@ -42,10 +48,13 @@
       }
     },
   computed: {
-      ...mapGetters(['authError'])
+      ...mapGetters(['authError','userLoggedIn','isLoggedIn','currentUser']),
+      username() {
+        return this.currentUser.username ? this.currentUser.username : 'guest'
+      },
     },
     methods: {
-      ...mapActions(['login','logout'])
+      ...mapActions(['login','logout','fetchProfile'])
     },
   }
 </script>

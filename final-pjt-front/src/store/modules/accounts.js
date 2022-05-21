@@ -133,7 +133,14 @@ export default {
             console.error(err.response.data)
             commit('SET_AUTH_ERROR', err.response.data)
           })
-      } 
+        
+        axios({
+            url: drf.accounts.login(),
+            method: 'post',
+            data: credentials
+        })
+      
+     } 
 
 
 

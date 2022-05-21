@@ -5,4 +5,7 @@ app_name = 'accounts'
 
 urlpatterns = [
     path('profile/<username>/', views.profile),
+    path('history/<int:user_pk>/<int:partner_pk>', views.update_history),
+    path('history/reset/<int:user_pk>/<int:partner_pk>', views.reset_history),
+
 ]

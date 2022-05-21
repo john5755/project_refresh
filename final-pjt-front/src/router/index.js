@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import LoginView from '@/views/LoginView.vue'
 import LogoutView from '@/views/LogoutView.vue'
 import NotFound404 from '../views/NotFound404.vue'
-
+import ProfileView from '../views/ProfileView.vue'
 
 
 Vue.use(VueRouter)
@@ -20,8 +20,11 @@ const routes = [
     name: 'logout',
     component: LogoutView
   },
-  
-  
+  {
+    path: '/profile/:username',  // /profile/neo
+    name: 'profile',
+    component: ProfileView,
+  },
   
   
   
