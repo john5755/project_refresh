@@ -5,11 +5,17 @@ import LoginView from '@/views/LoginView.vue'
 import LogoutView from '@/views/LogoutView.vue'
 import NotFound404 from '../views/NotFound404.vue'
 import ProfileView from '../views/ProfileView.vue'
+import SignupView from '../views/SignupView.vue'
 
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/signup',
+    name: 'signup',
+    component: SignupView
+  },
   {
     path: '/login',
     name: 'login',

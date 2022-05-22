@@ -73,7 +73,7 @@ export default {
     },
 
     removePartnerLoggedIn({ commit }) {
-      commit('SET_PARTNER_LOGGND_IN', '')
+      commit('SET_PARTNER_LOGGED_IN', '')
     },
 
 
@@ -167,7 +167,7 @@ export default {
           const token = res.data.key
           dispatch('saveToken', token)
           dispatch('fetchCurrentUser')
-          router.push({ name: 'articles' })
+          router.push({ name: 'login' })
         })
         .catch(err => {
           console.error(err.response.data)
@@ -200,7 +200,8 @@ export default {
           .error(err => {
             console.error(err.response)
           })
-        }else if (getters.isLoggedIn) {
+        // }else if (getters.isLoggedIn) {
+        }else {
         axios({
           url: drf.accounts.logout(),
           method: 'post',
@@ -271,5 +272,45 @@ export default {
           commit('SET_PROFILE', res.data)
         })
     },
+
+    deleteUser({getters, dispatch}, userPk) {
+      axios({
+        url:drf.accounts.delete(userPk),
+        method: 'delete',
+        headers: getters.authHeader
+      })
+        .then(res => {
+          console.log(res)
+          dispatch('removeToken')
+          dispatch('removeUserLoggedIn')
+          dispatch('removePartnerLoggedIn')
+          router.push({ name: 'login' })
+        })
+        .catch(err => {
+          if (err.response.status === 401) {
+            dispatch('removeToken')
+            router.push({ name: 'profile', params:{username: getters.currentUser.username} })
+          }
+        })
+    },
+    resetHistory({getters}, {userPk,partnerPk}) {
+      console.log(partnerPk)
+      axios({
+        url:drf.accounts.resetHistory(userPk,partnerPk),
+        method: 'post',
+        headers: getters.authHeader
+      })
+      .then(res => {
+        const togetherCount = res.data.together_count
+        const partnerCount = res.data.partner_count
+        alert(`너와 그(녀)와의 추억횟수 : ${togetherCount}
+        근데 그(녀)는 : ${partnerCount} ㅋㅋㅋㅋ`)
+
+      })
+    }
+
+      
   },
+
+
 }

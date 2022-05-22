@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     "corsheaders",
+    'allauth.socialaccount', 
 
     #native
     'django.contrib.admin',
@@ -164,3 +165,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 #     'http://localhost:8080/',
 #     'http://127.0.0.1:8001/',
 # ]
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer'
+}
+
+ACCOUNT_ADAPTER = 'accounts.adapters.CustomAccountAdapter'

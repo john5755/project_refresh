@@ -10,9 +10,15 @@ export default {
     logout: () => HOST + ACCOUNTS + 'logout/',
     signup: () => HOST + ACCOUNTS + 'signup/',
     
+    delete: userPk => HOST + ACCOUNTS + `delete/${userPk}/`,
+    
     changepassword: () => HOST + ACCOUNTS + 'password/change/',
     passwordReset: () => HOST + ACCOUNTS + 'reset/',
     passwordResetConfirm : () => HOST + ACCOUNTS + 'reset/confirm/',
+
+    resetHistory: (userPk,partnerPk) => HOST + ACCOUNTS + `history/reset/${userPk}/${partnerPk}/`,
+
+
     
     // Token 으로 현재 user 판단
     currentUserInfo: () => HOST + ACCOUNTS + 'user/',
