@@ -4,11 +4,11 @@ from . import views
 app_name = 'movies'
 urlpatterns = [
     # download data
+    path('genre/', views.genre),
     path('download/', views.download),
     path('cast/', views.cast),
     path('provider/', views.provider),
     path('providerlink/', views.providerlink),
-    path('genre/', views.genre),
 
     #json
     path('movielist/', views.movie_list, name='movie_list'),

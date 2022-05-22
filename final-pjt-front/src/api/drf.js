@@ -1,7 +1,8 @@
 const HOST = 'http://localhost:8000/'
 
 const ACCOUNTS = 'accounts/'
-// const MOVIES = 'movies/'
+const MOVIES = 'movies/'
+
 
 
 export default {
@@ -25,14 +26,15 @@ export default {
     // username으로 프로필 제공
     profile: username => HOST + ACCOUNTS + 'profile/' + username,
   },
-  // articles: {
-  //   // /articles/
-  //   articles: () => HOST + ARTICLES,
-  //   // /articles/1/
-  //   article: articlePk => HOST + ARTICLES + `${articlePk}/`,
-  //   likeArticle: articlePk => HOST + ARTICLES + `${articlePk}/` + 'like/',
-  //   comments: articlePk => HOST + ARTICLES + `${articlePk}/` + COMMENTS,
-  //   comment: (articlePk, commentPk) =>
-  //     HOST + ARTICLES + `${articlePk}/` + COMMENTS + `${commentPk}/`,
-  // },
+  movies: {
+    // /movies 메인 페이지/
+    movies: () => HOST + MOVIES+ 'movielist/',
+    // /articles/1/
+    movie: moviePk => HOST + MOVIES + `${moviePk}/`,
+
+    // likeArticle: articlePk => HOST + ARTICLES + `${articlePk}/` + 'like/',
+    // comments: articlePk => HOST + ARTICLES + `${articlePk}/` + COMMENTS,
+    // comment: (articlePk, commentPk) =>
+    //   HOST + ARTICLES + `${articlePk}/` + COMMENTS + `${commentPk}/`,
+  },
 }

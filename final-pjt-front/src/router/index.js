@@ -6,11 +6,13 @@ import LogoutView from '@/views/LogoutView.vue'
 import NotFound404 from '../views/NotFound404.vue'
 import ProfileView from '../views/ProfileView.vue'
 import SignupView from '../views/SignupView.vue'
-
+import HomeView from '../views/HomeView.vue'
+import DetailView from  '../views/DetailView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+// accounts
   {
     path: '/signup',
     name: 'signup',
@@ -31,12 +33,26 @@ const routes = [
     name: 'profile',
     component: ProfileView,
   },
+
+
+  // movies
+  {
+    path: '/home',
+    name: 'home',
+    component: HomeView,
+  }, 
+  {
+    path: '/detail/:moviePk',
+    name: 'detail',
+    component: DetailView,
+  }, 
+
   
   
   
   
   
-  
+  // 404 
   {
     path: '/404',
     name: 'NotFound404',
