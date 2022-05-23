@@ -43,16 +43,6 @@ class MovieListSerializer(serializers.ModelSerializer):
         model = Movie
         fields = '__all__'
 
-class MovieSerializer(serializers.ModelSerializer):
-
-    providers = ProviderSerializer(many=True, read_only=True)
-    genres = GenreSerializer(many=True, read_only=True)
-    comments = CommentSerializer(many=True, read_only=True)
-
-
-    class Meta:
-        model = Movie
-        fields = '__all__'
 
 class RateSerializer(serializers.ModelSerializer):
 
@@ -68,4 +58,13 @@ class RateSerializer(serializers.ModelSerializer):
         fields = ('pk', 'user', 'bgm_rate', 'movie',)
         read_only_fields = ('movie', )
 
-   
+class MovieSerializer(serializers.ModelSerializer):
+
+    providers = ProviderSerializer(many=True, read_only=True)
+    genres = GenreSerializer(many=True, read_only=True)
+    comments = CommentSerializer(many=True, read_only=True)
+    rate_users = RateSerializer(source='rate_set', many=True, read_only=True)
+
+    class Meta:
+        model = Movie
+        fields = '__all__'

@@ -13,7 +13,8 @@
       </a>
     </div>
     
-    
+    <p>{{ movie.rate_average }}</p>
+    <hr>
     <star-rating 
     v-model='rating'
     v-bind:increment="1"

@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import MovieListSerializer, MovieSerializer,CommentSerializer, RateSerializer
-
+from django.db.models import Avg
 import requests
 from .models import Movie, Genre ,Cast, Provider,Comment, Rate
 
@@ -33,14 +33,15 @@ def create_rating(request, movie_pk):
     serializer = RateSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save(movie=movie, user=user)
-
+        rate_average = Rate.objects.filter(movie=movie).aggregate(Avg('bgm_rate'))['bgm_rate__avg']
+        movie.rate_average = rate_average
+        movie.save()
         # 기존 serializer 가 return 되면, 단일 comment 만 응답으로 받게됨.
         # 사용자가 댓글을 입력하는 사이에 업데이트된 comment 확인 불가 => 업데이트된 전체 목록 return 
         
-        ratings = movie.rate_users.all().aggregate(Avg('bgm_rate'))
+        serializer = MovieSerializer(movie)
+        return Response(serializer.data)
         
-            
-        print(ratings)
         # serializer = RateSerializer(ratings, many=True)
         # return Response(serializer.data, status=status.HTTP_201_CREATED)
 

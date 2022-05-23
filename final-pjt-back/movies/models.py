@@ -14,6 +14,7 @@ class Movie(models.Model):
     release_date = models.TextField()
     runtime = models.IntegerField()
     rate_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='rate_movies', through='Rate')
+    rate_average = models.FloatField(null=True)
 
 class Rate(models.Model):
 

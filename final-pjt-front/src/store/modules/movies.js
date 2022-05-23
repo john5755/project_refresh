@@ -164,7 +164,7 @@ export default {
 
     // 평점 입력 
 
-		createRating({ getters},{ movieId, bgm_rate }) {
+		createRating({commit, getters},{ movieId, bgm_rate }) {
       const rating = { bgm_rate }
 
       axios({
@@ -174,8 +174,8 @@ export default {
         headers: getters.authHeader,
       })
         .then(res => {
-          console.log(res.data)
-          // commit('SET_MOVIE_RATINGS', res.data)
+          // console.log(res.data)
+          commit('SET_MOVIE', res.data)
         })
         .catch(err => console.error(err.response))
     },
