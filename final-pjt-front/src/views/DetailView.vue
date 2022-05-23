@@ -23,31 +23,6 @@
 
     </star-rating>
     
-    
-    
-    
-   
-   
-    <!-- <div v-if="isAuthor">
-      <router-link :to="{ name: 'articleEdit', params: { articlePk } }">
-        <button>Edit</button>
-      </router-link>
-      |
-      <button @click="deleteArticle(articlePk)">Delete</button>
-    </div>
-
-    
-    
-    <div>
-      Likeit:
-      <button
-        @click="likeArticle(articlePk)"
-      >{{ likeCount }}</button>
-    </div>
-
-    <hr /> -->
-    
-    
     <comment-list :comments="movie.comments">
     </comment-list> 
     

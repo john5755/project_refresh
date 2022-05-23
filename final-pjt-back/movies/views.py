@@ -6,6 +6,12 @@ from .serializers import MovieListSerializer, MovieSerializer,CommentSerializer,
 from django.db.models import Avg
 import requests
 from .models import Movie, Genre ,Cast, Provider,Comment, Rate
+from movies import serializers
+from django.contrib.auth import get_user_model
+from django.conf import settings
+
+User = get_user_model()
+
 
 # Create your views here.
 
@@ -44,10 +50,6 @@ def create_rating(request, movie_pk):
         
         # serializer = RateSerializer(ratings, many=True)
         # return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-
-
-
 
 
 @api_view(['POST'])
@@ -92,9 +94,24 @@ def comment_update_or_delete(request, movie_pk, comment_pk):
     elif request.method == 'DELETE':
         return delete_comment()
 
+@api_view(['GET'])
+def music_list(request):
+    movies = Movie.objects.filter(genres__id=12)    
+    serializer = MovieListSerializer(movies, many=True)
+    return Response(serializer.data)
 
+@api_view(['GET'])
+def ground_list(request):
+    user = request.user
+    partner_id = user.partner_id
+    partner = get_object_or_404(User, pk=partner_id)
 
+    user_genre_pk = Genre.objects.get(genre_name = user.favorite_genre).pk
+    partner_genre_pk = Genre.objects.get(genre_name = partner.favorite_genre).pk
 
+    movies = Movie.objects.exclude(genres__id=user_genre_pk).exclude(genres__id=partner_genre_pk)
+    serializer = MovieListSerializer(movies, many=True)
+    return Response(serializer.data)
 
 
 

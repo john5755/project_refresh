@@ -1,6 +1,10 @@
 <template>
   <div>
     <h1>Home</h1>
+    <router-link 
+      :to="{ name: 'background' }">
+      BGM
+    </router-link>
     <ul v-for="movie in movies" :key="movie.movie_id">
       <li>{{ movie.title }}</li>
       <li>{{ movie.tagline }}</li>
@@ -8,11 +12,6 @@
       <li>{{ movie.overview }}</li>
       <li>{{ movie.rate_users}}</li>
        
-        
-
-        <!-- 댓글 개수/좋아요 개수 -->
-        <!-- =>
-        ({{ article.comment_count }}) | +{{ article.like_count }} -->
     
     <hr>
     <!-- detail 연결 -->
@@ -35,7 +34,7 @@
     name: 'HomeView',
     data(){
       return {
-        tmdb:'https://image.tmdb.org/t/p/w500/'
+        tmdb:'https://image.tmdb.org/t/p/w500/',
       }
     },
     computed: {

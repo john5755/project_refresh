@@ -17,8 +17,9 @@ export default {
     passwordReset: () => HOST + ACCOUNTS + 'reset/',
     passwordResetConfirm : () => HOST + ACCOUNTS + 'reset/confirm/',
 
-    resetHistory: (userPk,partnerPk) => HOST + ACCOUNTS + `history/reset/${userPk}/${partnerPk}/`,
-
+    resetHistory: (userPk, partnerPk) => HOST + ACCOUNTS + `history/reset/${userPk}/${partnerPk}/`,
+    updateHistory: function (userPk, partnerPk) { 
+      return HOST + ACCOUNTS + `history/${userPk}/${partnerPk}/`},
 
     
     // Token 으로 현재 user 판단
@@ -32,7 +33,7 @@ export default {
     // /movies/1/
     movie: movieId => HOST + MOVIES + `${movieId}/`,
 
-    // likemovie: moviePk => HOST + movieS + `${moviePk}/` + 'like/',
+    // /movies/comments/
     comments: movieId => HOST + MOVIES + `${movieId}/` + COMMENTS,
     comment: (movieId, commentPk) =>
       HOST + MOVIES + `${movieId}/` + COMMENTS + `${commentPk}/`,
@@ -40,6 +41,11 @@ export default {
     ///rating
 
     ratings: movieId => HOST + MOVIES + `${movieId}/` + 'rating/',
+
+    /// BGM
+
+    musiclist: () => HOST + MOVIES + 'musiclist/',
+    groundlist: () => HOST + MOVIES + 'groundlist/',
     
   },
 }

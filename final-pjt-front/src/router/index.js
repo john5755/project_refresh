@@ -8,6 +8,7 @@ import ProfileView from '../views/ProfileView.vue'
 import SignupView from '../views/SignupView.vue'
 import HomeView from '../views/HomeView.vue'
 import DetailView from  '../views/DetailView.vue'
+import BackGround from '../views/BackGround.vue'
 
 Vue.use(VueRouter)
 
@@ -46,7 +47,11 @@ const routes = [
     name: 'detail',
     component: DetailView,
   }, 
-
+  {
+    path: '/background',
+    name: 'background',
+    component: BackGround,
+  },
   
   
   

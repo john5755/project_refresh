@@ -20,10 +20,11 @@ export default {
   // 모든 state는 getters 를 통해서 접근하겠다.
   getters: {
     isLoggedIn: state => !!state.token,
-
     userLoggedIn : state => !!state.userPk,
     partnerLoggedIn : state => !!state.partnerPk,
 
+    userPk: state => state.userPk,
+    partnerPk: state => state.partnerPk,
 
     currentUser: state => state.currentUser,
     profile: state => state.profile,
@@ -83,7 +84,7 @@ export default {
     //0번 user는 관리자이므로 작동하지 않음이 더욱 적절하다.
 
 
-    login({ commit, getters, dispatch }, credentials) {
+    login({ commit, getters, dispatch}, credentials) {
       // 토큰이 없는 경우 userLoggedIn 초기화
       if (!getters.isLoggedIn) {
         dispatch('removeUserLoggedIn')
@@ -95,8 +96,9 @@ export default {
           .then(res => { 
             const token = res.data.key
             dispatch('saveToken', token)
+            console.log(getters.userPk)
             dispatch('fetchCurrentUser')
-            console.log(getters.userLoggedIn)
+            console.log(getters.userPk)
             // dispatch('logout')
             // router.push({ name: 'login' })
             
@@ -109,7 +111,6 @@ export default {
           //   dispatch('logout')
           // })
           
-
       }else if (getters.userLoggedIn && !getters.partnerLoggedIn){
         //partner login 시키기 전에 user logout부터 시킴
         
@@ -126,27 +127,41 @@ export default {
             const token = res.data.key
             dispatch('saveToken', token)
             dispatch('fetchCurrentUser')
+            console.log(getters.partnerPk)
             // dispatch('savePartnerLoggedIn',getters.currentUser.pk)
-            router.push({ name: 'home' }) //// 2번째 로그인까지 완료된 후 띄울 화면 (나중에 바꿔야함)
+            router.push({ name: 'home' }) //// 
+            
+          })
+          .then(() => {
+            axios ({
+              url: drf.accounts.updateHistory(getters.userPk, getters.partnerPk),
+              method: 'get',
+            })
+              .then(res => {
+                console.log(res.data)
+              })
+
           })
           .catch(err => {
             console.error(err.response.data)
             commit('SET_AUTH_ERROR', err.response.data)
           })
-        
-        axios({
-            url: drf.accounts.login(),
-            method: 'post',
-            data: credentials
+        // axios({
+        //     url: drf.accounts.login(),
+        //     method: 'post',
+        //     data: credentials
+        // })
+
+        axios ({
+          url: drf.accounts.updateHistory(getters.userPk, getters.partnerPk),
+          method: 'get',
         })
-      
-     } 
-
-
-
-
-
-    },
+          .then(res => {
+            console.log(getters.partnerPk)
+            console.log(res.data)
+          })
+        
+     }},
 
     signup({ commit, dispatch }, credentials) {
       /* 
@@ -242,6 +257,7 @@ export default {
             commit('SET_CURRENT_USER', res.data)
             
             if (!getters.userLoggedIn) {
+
                commit('SET_USER_LOGGEND_IN',res.data.pk)
               
               }else {
@@ -294,7 +310,7 @@ export default {
         })
     },
     resetHistory({getters}, {userPk,partnerPk}) {
-      console.log(partnerPk)
+      // console.log(partnerPk)
       axios({
         url:drf.accounts.resetHistory(userPk,partnerPk),
         method: 'post',
@@ -307,8 +323,8 @@ export default {
         근데 그(녀)는 : ${partnerCount} ㅋㅋㅋㅋ`)
 
       })
-    }
-
+    },
+ 
       
   },
 
