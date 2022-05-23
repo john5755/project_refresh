@@ -1,36 +1,33 @@
 <template>
   <div>
+    
+    <h1>{{ movie.title }}</h1>
+    
     <!-- 대표이미지 -->
     <div><img :src="tmdb+movie.poster_path" alt="poster"></div>
     
     <!-- provider links -->
     <div v-for= 'provider in movie.providers' :key='provider.provider_name'>
-      <div v-if="provider.provider_name === 'Watcha'">
-        <a href="https://www.watcha.com/">
-        <img :src="require(`@/assets/${provider.provider_name}.jpg`)" alt="">
-        </a>
-      </div>
-      <div v-if="provider.provider_name === 'Netflix'">
-        <a href="https://www.netflix.com/">
-        <img :src="require(`@/assets/${provider.provider_name}.jpg`)" alt="">
-        </a>
-      </div>
-
-      <a href="`https://www.${provider.provider_name}.com/`">
-        <img :src="require(`@/assets/${provider.provider_name}.jpg`)" alt="">
+      <a :href="provider.address">
+        <img :src="tmdb+provider.logo_path" alt="logo" width="50" height="50">
       </a>
-      
     </div>
     
     
-    <h1>{{ movie.title }}</h1>
+    <star-rating 
+    v-model='rating'
+    v-bind:increment="1"
+    v-bind:max-rating="5"
+    @rating-selected = "setRating">
+
+    </star-rating>
     
-    <!-- <p>
-      {{ article.content }}
-    </p>
+    
+    
+    
    
    
-    <div v-if="isAuthor">
+    <!-- <div v-if="isAuthor">
       <router-link :to="{ name: 'articleEdit', params: { articlePk } }">
         <button>Edit</button>
       </router-link>
@@ -47,45 +44,39 @@
       >{{ likeCount }}</button>
     </div>
 
-    <hr />
+    <hr /> -->
     
     
-    <comment-list :comments="article.comments"></comment-list>  -->
+    <comment-list :comments="movie.comments">
+    </comment-list> 
     
 
   </div>
 </template>
 
 <script>
+  import StarRating from 'vue-star-rating'
   import { mapGetters, mapActions } from 'vuex'
-  // import CommentList from '@/components/CommentList.vue'
+  import CommentList from '@/components/CommentList.vue'
 
 
 
   export default {
     name: 'MovieDetail',
     // components: { CommentList },
+    components:{
+      StarRating,
+      CommentList,
+    },
     data() {
       return {
-        moviePk: this.$route.params.moviePk,
+        movieId: this.$route.params.movieId,
         tmdb:'https://image.tmdb.org/t/p/w500/',
-        providerImg:"@/assets/",
-        jpg:'.jpg',
-        'Netfilx':'https://www.netflix.com',
-        Watcha :'https://watcha.com/',
-        links: {
-        'Netfilx':'https://www.netflix.com',
-        'Amazon Prime Video': 'https://www.primevideo.com/',
-        'Watcha':'https://watcha.com/',
-        }
+        bgm_rate:0
       }
     },
     computed: {
       ...mapGetters(['movie']),
-      linkGet() {
-        // const ott = sdf
-        return this.links['Netflix']
-      },
       // ...mapGetters(['isAuthor', 'article']),
       // likeCount() {
       //   return this.article.like_users?.length
@@ -94,12 +85,17 @@
     methods: {
       ...mapActions([
         'fetchMovie',
+        'createRating',
         // 'likeArticle',
         // 'deleteArticle',
-      ])
+      ]),
+      setRating: function(bgm_rate){
+        this.bgm_rate = bgm_rate
+        this.createRating({ movieId: this.movie.movie_id, bgm_rate: this.bgm_rate, })
+      },
     },
     created() {
-      this.fetchMovie(this.moviePk)
+      this.fetchMovie(this.movieId)
     },
   }
 </script>

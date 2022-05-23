@@ -127,7 +127,7 @@ export default {
             dispatch('saveToken', token)
             dispatch('fetchCurrentUser')
             // dispatch('savePartnerLoggedIn',getters.currentUser.pk)
-            router.push({ name: 'login' }) //// 2번째 로그인까지 완료된 후 띄울 화면 (나중에 바꿔야함)
+            router.push({ name: 'home' }) //// 2번째 로그인까지 완료된 후 띄울 화면 (나중에 바꿔야함)
           })
           .catch(err => {
             console.error(err.response.data)

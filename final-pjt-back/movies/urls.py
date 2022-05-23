@@ -8,9 +8,18 @@ urlpatterns = [
     path('download/', views.download),
     path('cast/', views.cast),
     path('provider/', views.provider),
+    path('provider2/', views.provider2),
     path('providerlink/', views.providerlink),
 
-    #json
+    #movie
     path('movielist/', views.movie_list, name='movie_list'),
-    path('<int:movie_id>/', views.movie_detail, name='movie_detail')
+    path('<int:movie_id>/', views.movie_detail, name='movie_detail'),
+
+    #comment
+    path('<int:movie_pk>/comments/', views.create_comment),
+    path('<int:moive_pk>/comments/<int:comment_pk>/', views.comment_update_or_delete),
+
+
+    #rating
+    path('<int:movie_pk>/rating/', views.create_rating ),    
 ]

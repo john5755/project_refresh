@@ -2,7 +2,7 @@ const HOST = 'http://localhost:8000/'
 
 const ACCOUNTS = 'accounts/'
 const MOVIES = 'movies/'
-
+const COMMENTS = 'comments/'
 
 
 export default {
@@ -29,12 +29,17 @@ export default {
   movies: {
     // /movies 메인 페이지/
     movies: () => HOST + MOVIES+ 'movielist/',
-    // /articles/1/
-    movie: moviePk => HOST + MOVIES + `${moviePk}/`,
+    // /movies/1/
+    movie: movieId => HOST + MOVIES + `${movieId}/`,
 
-    // likeArticle: articlePk => HOST + ARTICLES + `${articlePk}/` + 'like/',
-    // comments: articlePk => HOST + ARTICLES + `${articlePk}/` + COMMENTS,
-    // comment: (articlePk, commentPk) =>
-    //   HOST + ARTICLES + `${articlePk}/` + COMMENTS + `${commentPk}/`,
+    // likemovie: moviePk => HOST + movieS + `${moviePk}/` + 'like/',
+    comments: movieId => HOST + MOVIES + `${movieId}/` + COMMENTS,
+    comment: (movieId, commentPk) =>
+      HOST + MOVIES + `${movieId}/` + COMMENTS + `${commentPk}/`,
+
+    ///rating
+
+    ratings: movieId => HOST + MOVIES + `${movieId}/` + 'rating/',
+    
   },
 }

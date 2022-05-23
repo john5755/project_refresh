@@ -17,7 +17,7 @@
     <hr>
     <!-- detail 연결 -->
     <router-link 
-      :to="{ name: 'detail', params: { moviePk: movie.movie_id } }">
+      :to="{ name: 'detail', params: { movieId: movie.movie_id } }">
       <!-- <img :src='posrterUrl( movie.poster_path )' alt="poster"> -->
       <img :src="tmdb+movie.poster_path" alt="poster">
     </router-link>

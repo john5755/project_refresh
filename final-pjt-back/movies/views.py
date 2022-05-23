@@ -2,10 +2,10 @@ from django.shortcuts import get_object_or_404, render, get_list_or_404
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import MovieListSerializer, MovieSerializer
+from .serializers import MovieListSerializer, MovieSerializer,CommentSerializer, RateSerializer
 
 import requests
-from .models import Movie, Genre ,Cast, Provider
+from .models import Movie, Genre ,Cast, Provider,Comment, Rate
 
 # Create your views here.
 
@@ -20,8 +20,102 @@ def movie_list(request):
 def movie_detail(request, movie_id):
     movie = get_object_or_404(Movie, movie_id=movie_id)
     serializer = MovieSerializer(movie)
-    print(type(serializer))
+    
     return Response(serializer.data)
+
+@api_view(['POST'])
+def create_rating(request, movie_pk):
+    print(request.data)
+    user = request.user
+    movie = get_object_or_404(Movie, movie_id=movie_pk)
+    
+    
+    serializer = RateSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(movie=movie, user=user)
+
+        # 기존 serializer 가 return 되면, 단일 comment 만 응답으로 받게됨.
+        # 사용자가 댓글을 입력하는 사이에 업데이트된 comment 확인 불가 => 업데이트된 전체 목록 return 
+        
+        ratings = movie.rate_users.all().aggregate(Avg('bgm_rate'))
+        
+            
+        print(ratings)
+        # serializer = RateSerializer(ratings, many=True)
+        # return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+
+
+
+
+@api_view(['POST'])
+def create_comment(request, movie_pk):
+    user = request.user
+    movie = get_object_or_404(Movie, pk=movie_pk)
+    
+    serializer = CommentSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(movie=movie, user=user)
+
+        # 기존 serializer 가 return 되면, 단일 comment 만 응답으로 받게됨.
+        # 사용자가 댓글을 입력하는 사이에 업데이트된 comment 확인 불가 => 업데이트된 전체 목록 return 
+        comments = movie.comments.all()
+        serializer = CommentSerializer(comments, many=True)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+@api_view(['PUT', 'DELETE'])
+def comment_update_or_delete(request, movie_pk, comment_pk):
+    movie = get_object_or_404(Movie, pk=movie_pk)
+    comment = get_object_or_404(Comment, pk=comment_pk)
+
+    def update_comment():
+        if request.user == comment.user:
+            serializer = CommentSerializer(instance=comment, data=request.data)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save()
+                comments = movie.comments.all()
+                serializer = CommentSerializer(comments, many=True)
+                return Response(serializer.data)
+
+    def delete_comment():
+        if request.user == comment.user:
+            comment.delete()
+            comments = movie.comments.all()
+            serializer = CommentSerializer(comments, many=True)
+            return Response(serializer.data)
+    
+    if request.method == 'PUT':
+        return update_comment()
+    elif request.method == 'DELETE':
+        return delete_comment()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,6 +227,57 @@ def provider(request):
         provider = Provider(provider_name=provider_name)
         provider.save()
 
+
+def provider2(request):
+    path = '/watch/providers/movie'
+    params = {
+        'api_key' : api_key,
+        'language' : 'ko',
+        'watch_region' : 'KR'
+    }
+    addresses = [
+    'https://www.netflix.com/kr/',
+    'https://www.primevideo.com/',
+    'https://www.apple.com/kr/itunes/',
+    'https://www.sunnxt.com/',
+    'https://www.wavve.com/',
+    'https://mubi.com/',
+    'https://watcha.com/',
+    'https://www.classixapp.com/',
+    'https://serieson.naver.com/v2/movie',
+    'https://guidedoc.tv/',
+    'https://watchargo.com/',
+    'https://eventive.org/',
+    'https://www.cultpix.com/',
+    'https://www.apple.com/kr/apple-tv-plus/',
+    'https://www.filmbox.com/',
+    'https://curiositystream.com/',
+    'https://spamflix.com/',
+    'https://www.docsville.com/',
+    'https://www.wowpresentsplus.com/',
+    'https://www.magellantv.com/',
+    'https://www.broadwayhd.com/',
+    'https://filmzie.com/',
+    'https://www.dekkoo.com/',
+    'https://www.truestory.film/',
+    'https://dafilms.com/',
+    'https://www.hoichoi.tv/viewplans',
+    'https://www.disneyplus.com/ko-kr',
+    'https://www.plex.tv/'
+    ]
+    response = requests.get(BASE_URL + path, params=params)
+    providers = response.json()['results']
+    target = get_list_or_404(Provider)
+    for i in range(28):
+        logo_path = providers[i]['logo_path']
+        address = addresses[i] 
+        
+        target[i].logo_path = logo_path
+        target[i].address  = address
+        target[i].save()
+
+
+
 def providerlink(request):
     movies = get_list_or_404(Movie)
     params = {
@@ -160,3 +305,5 @@ def genre(request):
         genre_name = genre['name']
         genre = Genre(genre_name=genre_name)
         genre.save()
+
+

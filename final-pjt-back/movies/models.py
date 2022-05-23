@@ -36,6 +36,8 @@ class Provider(models.Model):
 
     provider_name = models.CharField(max_length=100)
     movies = models.ManyToManyField(Movie, related_name='providers')
+    address = models.CharField(max_length=100, null=True, blank=True)
+    logo_path = models.CharField(max_length=100, null=True, blank=True)
 
 class Comment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='comments')

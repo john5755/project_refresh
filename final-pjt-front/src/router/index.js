@@ -42,7 +42,7 @@ const routes = [
     component: HomeView,
   }, 
   {
-    path: '/detail/:moviePk',
+    path: '/detail/:movieId',
     name: 'detail',
     component: DetailView,
   }, 
