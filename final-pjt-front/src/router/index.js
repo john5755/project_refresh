@@ -54,7 +54,7 @@ const routes = [
     component: BackGround,
   },
   {
-    path: '/searchname',
+    path: '/searchname/:query',
     name: 'searchname',
     component: SearchNameView,
   },

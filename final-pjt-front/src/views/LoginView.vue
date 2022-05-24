@@ -1,5 +1,10 @@
 <template>
   <div>
+    <nav>
+      <div v-if="userLoggedIn">
+        <router-link :to="{ name: 'logout' }">Logout</router-link>
+      </div>
+    </nav>
     <h1 v-if="!isLoggedIn" >Login</h1>
     <h1 v-if="userLoggedIn">Partner Login</h1>
 
@@ -11,7 +16,7 @@
       </router-link>
     </div>
     
-    <form @submit.prevent="login(credentials)">
+    <form @submit.prevent="onSubmit(credentials)">
       <div>
         <label for="username">username: </label>
         <input v-model="credentials.username" type="text" id="username" required />
@@ -23,9 +28,6 @@
       </div>
 
       <button>Login</button>
-    </form>
-    <form @submit.prevent="logout()">
-      <button>logout</button>
     </form>
   </div>
 </template>
@@ -54,7 +56,12 @@
       },
     },
     methods: {
-      ...mapActions(['login','logout','fetchProfile'])
+      ...mapActions(['login', 'fetchProfile']),
+    onSubmit(credentials) {
+      this.login(credentials)
+      this.credentials.username = ''
+      this.credentials.password = ''
+    }
     },
   }
 </script>

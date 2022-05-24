@@ -43,9 +43,6 @@ export default {
     charMovies: Array
   },
 
-  watch: {
-    charMovies(){}
-  }
   
 
 }

@@ -198,6 +198,7 @@ export default {
         })
           .then(() => {
             dispatch('removeToken')
+            dispatch('removeUserLoggedIn')
             router.push({ name: 'login' })
           })
           .error(err => {

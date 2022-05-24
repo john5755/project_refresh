@@ -6,7 +6,7 @@
       BGM
     </router-link>
     <router-link
-      :to="{ name: 'searchname' }">
+      :to="{ name: 'searchname', parmas:{query:''} }">
       NAME
     </router-link>
     <ul v-for="movie in movies" :key="movie.movie_id">

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   'name': 'NameSearchForm',
@@ -23,8 +23,12 @@ export default {
     onSubmit() {
       this.fetchCharMovies(this.content)
       this.fetchActorMovies(this.content)
+      this.$router.push({name:'searchname', params:{query:this.content}})
       this.content = ''
     }
+  },
+  computed: {
+    ...mapGetters(['charMovies'])
   }
 }
 </script>

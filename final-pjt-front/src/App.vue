@@ -1,18 +1,25 @@
 <template>
   <div id="app">
-    
-    <router-view></router-view>
+    <nav-bar
+    v-if="partnerLoggedIn&&userLoggedIn"></nav-bar>
+    <router-view
+    :key="$route.fullPath"></router-view>
   </div>
 </template>
 
 
 <script>
-
+import { mapGetters } from 'vuex'
+import NavBar from './components/NavBar.vue'
 
 export default {
   name : "App",
   components:{
+    NavBar
 
+  },
+  computed:{
+    ...mapGetters(['partnerLoggedIn', 'userLoggedIn'])
   }
     
   
