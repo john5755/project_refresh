@@ -1,11 +1,16 @@
 <template>
   
-  <div id="app">
-    <nav-bar
-    v-if="partnerLoggedIn&&userLoggedIn"></nav-bar>
-    <router-view
-    :key="$route.fullPath"></router-view>
-  </div>
+    <div id="app">
+      <nav-bar
+        v-if="partnerLoggedIn&&userLoggedIn">
+      </nav-bar>
+      
+      <router-view
+        :key="$route.fullPath">
+      </router-view>
+    
+    </div>
+ 
 </template>
 
 
@@ -38,6 +43,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100vh;
 }
 
 nav {

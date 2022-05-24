@@ -1,51 +1,78 @@
 <template>
-  <div>
+  <div class='loginview d-flex flex-column justify-content-center'>
   
-  <b-container>
+  <div class="container justify-content-center ">
     <!-- login/partner login -->
-    <h1 v-if="!isLoggedIn" >Login</h1>
-    <h1 v-if="userLoggedIn">Partner Login</h1>
-
+    <div>
+      <h1 v-if="!isLoggedIn" >Login</h1>
+      <h1 v-if="userLoggedIn">Partner Login</h1>
+    </div>
     <account-error-list v-if="authError"></account-error-list>
 
-    <!-- profile 수정 버튼 -->
-    <div v-if="userLoggedIn">
-      <router-link :to="{ name: 'profile', params: { username } }">
-        {{ currentUser.username }} 프로필수정
-      </router-link>
-    </div>
+   
     
 
     <!-- ID/PASSWORD 입력 -->
-    <b-card>
-      
-      <b-form @submit.prevent="onSubmit(credentials)">
-      <container-fluid>  
-        <div>
-          <label for="username">username: </label>
-          <b-form-input v-model="credentials.username" type="text" id="username" required />
-        </div>
+    <div class="row d-flex justify-content-center">
+      <div class="card col-6">
+        
+        <form @submit.prevent="onSubmit(credentials)"  class="form">
+          
+          <div class='my-3'>
+            <label for="username"><b>username</b> </label>
+            <input class="form-control" v-model="credentials.username" type="text" id="username" required />
+          </div>
 
-        <div>
-          <label for="password">password: </label>
-          <b-form-input v-model="credentials.password" type="password" id="password" required />
-        </div>
-      </container-fluid>
+          <div class='my-3'>
+            <label for="password" ><b>password</b> </label>
+            <input class="form-control" v-model="credentials.password" type="password" id="password" required />
+          </div>
+          
+          <div >
+            <button class='my-2 login-button btn btn-secondary'>Login</button>
+          </div>
+      
+        </form>
      
-      <fluid>
-        <b-button variant="secondary">Login</b-button>
-      </fluid>
-      </b-form>
-    </b-card>
- 
+        <!-- <div class=" d-flex justify-content-center logout-button"> -->
+          <!-- <nav> -->
+            <div v-if="isLoggedIn">
+              <router-link :to="{ name: 'logout' }">
+                <button class='my-2 logout-button btn btn-secondary '>
+                Logout
+                </button>
+              </router-link>
+            </div>
+          <!-- </nav> -->
+        <!-- </div> -->
+            <div v-if="!userLoggedIn">
+              <router-link :to="{ name: 'signup' }">
+                <button class='my-2 logout-button btn btn-secondary '>
+                Sign Up
+                </button>
+              </router-link>
+            </div>
+     
+      </div>
+      
+    </div>
+     <!-- profile 수정 버튼 -->
+    <div v-if="userLoggedIn" class="row d-flex justify-content-center my-2">
+      <div class='col-6 row justify-content-end mx-0'>
+      <router-link :to="{ name: 'profile', params: { username } }" class="col-6 row justify-content-end" >
+        <!-- {{ currentUser.username }} -->
+        <button class="btn btn-outline-secondary edit-button" >
+          Profile
+        </button>
+      </router-link>
+      </div>
+      
+    </div>
 
     <!-- navbar for login -->
-    <nav>
-      <div v-if="userLoggedIn">
-        <router-link :to="{ name: 'logout' }">Logout</router-link>
-      </div>
-    </nav>
-  </b-container>
+
+
+  </div> 
   
   
   </div>
@@ -93,4 +120,19 @@
   }
 </script>
 
-<style></style>
+<style>
+.loginview {
+  height : 100%;
+}
+.login-button {
+  
+  width : 100%;
+}
+.logout-button {
+  width : 100%;
+}
+.edit-button {
+  height : 1.6rem;
+  font-size : .25rem; 
+}
+</style>
