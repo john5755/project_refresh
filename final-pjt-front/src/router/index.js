@@ -9,6 +9,7 @@ import SignupView from '../views/SignupView.vue'
 import HomeView from '../views/HomeView.vue'
 import DetailView from  '../views/DetailView.vue'
 import BackGround from '../views/BackGround.vue'
+import SearchNameView from '../views/SearchNameView.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/background',
     name: 'background',
     component: BackGround,
+  },
+  {
+    path: '/searchname',
+    name: 'searchname',
+    component: SearchNameView,
   },
   
   

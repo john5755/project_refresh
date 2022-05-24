@@ -25,4 +25,9 @@ urlpatterns = [
     #bgm
     path('musiclist/', views.music_list, name='music_list'),
     path('groundlist/', views.ground_list, name='ground_list'),
+
+    #search
+    path('character/<str:character>/', views.character, name='character'),
+    path('actorname/<str:actorname>/', views.actorname, name='actorname'),
+
 ]

@@ -5,6 +5,10 @@
       :to="{ name: 'background' }">
       BGM
     </router-link>
+    <router-link
+      :to="{ name: 'searchname' }">
+      NAME
+    </router-link>
     <ul v-for="movie in movies" :key="movie.movie_id">
       <li>{{ movie.title }}</li>
       <li>{{ movie.tagline }}</li>

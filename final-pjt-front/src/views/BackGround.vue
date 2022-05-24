@@ -1,7 +1,9 @@
 <template>
   <div>
-    <back-ground-movie></back-ground-movie>
-    <back-music-movie></back-music-movie>
+    <back-ground-movie
+    :groundMovies="groundMovies"></back-ground-movie>
+    <back-music-movie
+    :musicMovies="musicMovies"></back-music-movie>
 
   </div>
 </template>

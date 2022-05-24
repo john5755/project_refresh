@@ -29,7 +29,7 @@ class Genre(models.Model):
 
 class Cast(models.Model):
 
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='casts')
     actor_name = models.CharField(max_length=100)
     character = models.CharField(max_length=100)
 

@@ -19,12 +19,6 @@ class CommentSerializer(serializers.ModelSerializer):
         read_only_fields = ('movie', )
 
 
-class CastSerailizer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Cast
-        fields = '__all__'
-
 class ProviderSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -68,3 +62,16 @@ class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
         fields = '__all__'
+
+class CastSerailizer(serializers.ModelSerializer):
+    
+    class MovieSerializer(serializers.ModelSerializer):
+        class Meta:
+            model = Movie
+            fields = '__all__'
+    
+    movie = MovieSerializer(read_only=True)
+
+    class Meta:
+        model = Cast
+        fields = ('actor_name', 'character', 'movie',)

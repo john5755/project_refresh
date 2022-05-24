@@ -38,7 +38,7 @@ export default {
     SET_PROFILE: (state, profile) => state.profile = profile,
     SET_AUTH_ERROR: (state, error) => state.authError = error,
     
-    SET_USER_LOGGEND_IN: (state, userPk) => state.userPk = userPk,
+    SET_USER_LOGGED_IN: (state, userPk) => state.userPk = userPk,
     SET_PARTNER_LOGGED_IN: (state, partnerPk) => state.partnerPk = partnerPk
   },
 
@@ -62,7 +62,7 @@ export default {
     },
 
     saveUserLoggedIn({ commit }, userPk) {
-      commit('SET_USER_LOGGEND_IN', userPk)
+      commit('SET_USER_LOGGED_IN', userPk)
     },
 
     savePartnerLoggedIn({ commit }, partnerPk) {
@@ -70,7 +70,7 @@ export default {
     },
 
     removeUserLoggedIn({ commit }) {
-      commit('SET_USER_LOGGEND_IN', '')
+      commit('SET_USER_LOGGED_IN', '')
     },
 
     removePartnerLoggedIn({ commit }) {
@@ -96,9 +96,7 @@ export default {
           .then(res => { 
             const token = res.data.key
             dispatch('saveToken', token)
-            console.log(getters.userPk)
             dispatch('fetchCurrentUser')
-            console.log(getters.userPk)
             // dispatch('logout')
             // router.push({ name: 'login' })
             
@@ -127,21 +125,20 @@ export default {
             const token = res.data.key
             dispatch('saveToken', token)
             dispatch('fetchCurrentUser')
-            console.log(getters.partnerPk)
             // dispatch('savePartnerLoggedIn',getters.currentUser.pk)
             router.push({ name: 'home' }) //// 
             
           })
-          .then(() => {
-            axios ({
-              url: drf.accounts.updateHistory(getters.userPk, getters.partnerPk),
-              method: 'get',
-            })
-              .then(res => {
-                console.log(res.data)
-              })
+          // .then(() => {
+          //   axios ({
+          //     url: drf.accounts.updateHistory(getters.userPk, getters.partnerPk),
+          //     method: 'get',
+          //   })
+          //     .then(res => {
+          //       console.log(res.data)
+          //     })
 
-          })
+          // })
           .catch(err => {
             console.error(err.response.data)
             commit('SET_AUTH_ERROR', err.response.data)
@@ -151,15 +148,6 @@ export default {
         //     method: 'post',
         //     data: credentials
         // })
-
-        axios ({
-          url: drf.accounts.updateHistory(getters.userPk, getters.partnerPk),
-          method: 'get',
-        })
-          .then(res => {
-            console.log(getters.partnerPk)
-            console.log(res.data)
-          })
         
      }},
 
@@ -258,10 +246,19 @@ export default {
             
             if (!getters.userLoggedIn) {
 
-               commit('SET_USER_LOGGEND_IN',res.data.pk)
+               commit('SET_USER_LOGGED_IN',res.data.pk)
               
               }else {
                 commit('SET_PARTNER_LOGGED_IN',res.data.pk)
+                console.log(getters.partnerPk)
+                axios ({
+                  url: drf.accounts.updateHistory(getters.userPk, getters.partnerPk),
+                  method: 'get',
+                })
+                  .then(res => {
+                    console.log(getters.partnerPk)
+                    console.log(res.data)
+                  })
               }})
 
           .catch(err => {

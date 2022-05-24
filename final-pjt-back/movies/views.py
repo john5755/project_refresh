@@ -2,8 +2,8 @@ from django.shortcuts import get_object_or_404, render, get_list_or_404
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import MovieListSerializer, MovieSerializer,CommentSerializer, RateSerializer
-from django.db.models import Avg
+from .serializers import CastSerailizer, MovieListSerializer, MovieSerializer,CommentSerializer, RateSerializer
+from django.db.models import Avg, F
 import requests
 from .models import Movie, Genre ,Cast, Provider,Comment, Rate
 from movies import serializers
@@ -96,7 +96,7 @@ def comment_update_or_delete(request, movie_pk, comment_pk):
 
 @api_view(['GET'])
 def music_list(request):
-    movies = Movie.objects.filter(genres__id=12)    
+    movies = Movie.objects.filter(genres__id=12)[:10]
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
 
@@ -106,14 +106,55 @@ def ground_list(request):
     partner_id = user.partner_id
     partner = get_object_or_404(User, pk=partner_id)
 
+    user_season = user.favorite_season
+    partner_season = partner.favorite_season
+    monthes = []
+    if user_season == '겨울' or partner_season == '겨울':
+        monthes.append('-12-')
+        monthes.append('-01-')
+        monthes.append('-02-')
+    
+    if user_season == '봄' or partner_season == '봄':
+        monthes.append('-03-')
+        monthes.append('-04-')
+        monthes.append('-05-')
+
+    if user_season == '여름' or partner_season == '여름':
+        monthes.append('-06-')
+        monthes.append('-07-')
+        monthes.append('-08-')       
+
+    if user_season == '가을' or partner_season == '가을':
+        monthes.append('-09-')
+        monthes.append('-10-')
+        monthes.append('-11-')     
+
     user_genre_pk = Genre.objects.get(genre_name = user.favorite_genre).pk
     partner_genre_pk = Genre.objects.get(genre_name = partner.favorite_genre).pk
 
     movies = Movie.objects.exclude(genres__id=user_genre_pk).exclude(genres__id=partner_genre_pk)
+    for month in monthes:
+        movies = movies.exclude(release_date__contains=month)
+    movies = movies.order_by(F('rate_average').desc(nulls_last=True))[:10]
+    
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
+def character(request, character):
+    
+    casts = Cast.objects.filter(character__contains=character)
+    casts = casts.order_by(F('movie__rate_average').desc(nulls_last=True))[:10]
+    serializer = CastSerailizer(casts, many=True)
+    return Response(serializer.data)
 
+
+@api_view(['GET'])
+def actorname(request, actorname):
+    casts = Cast.objects.filter(actor_name__contains=actorname)
+    casts = casts.order_by(F('movie__rate_average').desc(nulls_last=True))[:10]
+    serializer = CastSerailizer(casts, many=True)
+    return Response(serializer.data)
 
 
 

@@ -35,8 +35,7 @@ export default {
 
     // /movies/comments/
     comments: movieId => HOST + MOVIES + `${movieId}/` + COMMENTS,
-    comment: (movieId, commentPk) =>
-      HOST + MOVIES + `${movieId}/` + COMMENTS + `${commentPk}/`,
+    comment: (movieId, commentPk) => HOST + MOVIES + `${movieId}/` + COMMENTS + `${commentPk}/`,
 
     ///rating
 
@@ -46,6 +45,11 @@ export default {
 
     musiclist: () => HOST + MOVIES + 'musiclist/',
     groundlist: () => HOST + MOVIES + 'groundlist/',
+    
+    /// search
+
+    character: (character) => HOST + MOVIES + 'character/' + `${character}`,
+    actorname: (actorname) => HOST + MOVIES + 'actorname/' + `${actorname}`,
     
   },
 }
