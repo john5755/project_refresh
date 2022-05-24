@@ -1,4 +1,5 @@
 <template>
+  
   <div id="app">
     <nav-bar
     v-if="partnerLoggedIn&&userLoggedIn"></nav-bar>

@@ -142,7 +142,7 @@ def ground_list(request):
 
 @api_view(['GET'])
 def character(request, character):
-    
+    character = character + ' '
     casts = Cast.objects.filter(character__contains=character)
     casts = casts.order_by(F('movie__rate_average').desc(nulls_last=True))[:10]
     serializer = CastSerailizer(casts, many=True)
@@ -151,6 +151,7 @@ def character(request, character):
 
 @api_view(['GET'])
 def actorname(request, actorname):
+    actorname = actorname + ' '
     casts = Cast.objects.filter(actor_name__contains=actorname)
     casts = casts.order_by(F('movie__rate_average').desc(nulls_last=True))[:10]
     serializer = CastSerailizer(casts, many=True)
