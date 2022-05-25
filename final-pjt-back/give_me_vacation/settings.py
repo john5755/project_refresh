@@ -171,3 +171,6 @@ REST_AUTH_REGISTER_SERIALIZERS = {
 }
 
 ACCOUNT_ADAPTER = 'accounts.adapters.CustomAccountAdapter'
+
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True # E-mail address is automatically confirmed by a GET request
+ACCOUNT_EMAIL_VERIFICATION = 'none' # Allow logins with an unverified e-mail address

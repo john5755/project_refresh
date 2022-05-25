@@ -8,4 +8,6 @@ urlpatterns = [
     path('history/<int:user_pk>/<int:partner_pk>/', views.update_history),
     path('history/reset/<int:user_pk>/<int:partner_pk>/', views.reset_history),
     path('delete/<int:user_pk>/',views.delete_user ),
+    path('update/<int:user_pk>/', views.update_profile ),
+    
 ]

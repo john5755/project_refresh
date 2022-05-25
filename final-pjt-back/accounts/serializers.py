@@ -19,7 +19,10 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = get_user_model()
-        fields = ('pk', 'username', 'email','partner_id')
+        fields = ('pk', 'username', 'email','partner_id','favorite_genre','favorite_season','first_name','last_name')
+        read_only_fields = ('pk','username','password1','password2' )
+
+
 
 class HistorySerializer(serializers.ModelSerializer):
 

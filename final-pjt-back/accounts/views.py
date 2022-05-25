@@ -17,6 +17,21 @@ def profile(request, username):
     serializer = ProfileSerializer(user)
 
     return Response(serializer.data)
+
+
+@api_view(['POST'])
+def update_profile(request,user_pk):
+    user = get_object_or_404(User, pk=user_pk)
+    print(user)
+
+    serializer = ProfileSerializer(instance=user, data=request.data)
+    print(serializer)
+    if serializer.is_valid(raise_exception=True):
+    # 'pk', 'username', 'email','partner_id','favorite_genre','favorite_season','first_name','last_name'
+        serializer.save()
+
+    return Response(serializer.data)
+
     
 @api_view(['GET'])
 def update_history(request, user_pk, partner_pk):

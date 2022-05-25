@@ -178,6 +178,32 @@ export default {
         })
     },
 
+    updateProfile({commit, getters }, credentials){
+      axios({
+        url: drf.accounts.updateProfile(getters.profile.pk),
+        method:'post',
+        data: credentials
+      })
+      .then(res => {
+        // dispatch(this.fetchProfile, )
+        console.log(res)
+        commit('SET_PROFILE', res.data)
+        alert("프로필이 수정되었습니다")
+        // router.push({
+        //   name:'profile',
+        //   params: { username: getters.profile.username }
+        // })
+      })
+      .catch(err => {
+        console.log(err)
+        router.push({
+          name:'profile',
+          params: {username: getters.profile.username }
+        })
+      })
+    
+    },
+
     logout({ getters, dispatch }) {
       /* 
       POST: token을 logout URL로 보내기

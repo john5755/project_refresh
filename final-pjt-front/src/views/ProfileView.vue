@@ -2,30 +2,53 @@
   <div>
     <h1>{{ profile.username }}</h1>
 
+    <div class="container justify-content-center">
+      <h1>SIGN UP</h1>
+      <div class="row d-flex justify-content-center">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+      
+      <signup-form :profile="profile" action="EDIT">
+      </signup-form> 
+
+    <!-- <form @submit.prevent="onSubmit">
+      <div>
+        <label for="title">title: </label>
+        <input v-model="newArticle.title" type="text" id="title" />
+      </div>
+    <div>
+      <label for="content">contnet: </label>
+      <textarea v-model="newArticle.content" type="text" id="content"></textarea>
+    </div>
     
+    <div>
+      <button>{{ action }}</button>
+    </div>
+  </form> -->
     
-    <!-- <h2>작성댓글(시간남으면)</h2>
-    <ul>
-      <li v-for="article in profile.articles" :key="article.pk">
-        <router-link :to="{ name: 'article', params: { articlePk: article.pk } }">
-          {{ article.title }}
-        </router-link>
-      </li>
-    </ul> -->
+      <h1>{{profile.favorite_genre}}</h1> 
+    
     
     
     <button @click="deleteUser(profile.pk)">profile delete</button>
     <button @click="onResetHistory">그/그녀와의 기억 지우기 ㅋㅋ</button>
     <p>{{profile.partner_id}} </p>
   </div>
+  </div>
+  
+  </div>
+  </div>
 </template>
 
 <script>
 import { mapGetters, mapActions, } from 'vuex'
+import SignupForm from '@/components/SignupForm.vue'
 
 
 export default {
   name: 'ProfileView',
+  components : {
+    SignupForm,
+  },
   data(){
     return {
       payload2:{

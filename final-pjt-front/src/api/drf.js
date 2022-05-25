@@ -21,6 +21,8 @@ export default {
     updateHistory: function (userPk, partnerPk) { 
       return HOST + ACCOUNTS + `history/${userPk}/${partnerPk}/`},
 
+    updateProfile: (userPk) => HOST +  ACCOUNTS + `update/${userPk}/`,
+
     
     // Token 으로 현재 user 판단
     currentUserInfo: () => HOST + ACCOUNTS + 'user/',
