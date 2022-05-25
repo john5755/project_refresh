@@ -4,7 +4,7 @@
   <div>
     <account-error-list v-if="authError"></account-error-list>
     <div class="container justify-content-center">
-      <h1>SIGN UP</h1>
+      
       <div class="row d-flex justify-content-center">
       <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
       <signup-form :profile="profile" action="SIGNUP"></signup-form> 

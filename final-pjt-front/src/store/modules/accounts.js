@@ -325,6 +325,7 @@ export default {
           dispatch('removeUserLoggedIn')
           dispatch('removePartnerLoggedIn')
           router.push({ name: 'login' })
+          alert('탈퇴되셨습니다')
         })
         .catch(err => {
           if (err.response.status === 401) {
@@ -343,8 +344,9 @@ export default {
       .then(res => {
         const togetherCount = res.data.together_count
         const partnerCount = res.data.partner_count
-        alert(`너와 그(녀)와의 추억횟수 : ${togetherCount}
-        근데 그(녀)는 : ${partnerCount} ㅋㅋㅋㅋ`)
+        alert(
+        `너와 그(녀)와의 추억횟수 : ${togetherCount}
+        근데 그(녀)는 : ${partnerCount} ㅋㅋㅋㅋㅋㅋ`)
 
       })
     },
