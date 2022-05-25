@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="container  mt-5">
     
     
     
-<!--    
-    <div><img :src="tmdb+movie.poster_path" alt="poster"></div>
+   
+    <!-- <div><img :src="tmdb+movie.poster_path" alt="poster"></div>
     
    
     <div v-for= 'provider in movie.providers' :key='provider.provider_name'>
@@ -15,58 +15,101 @@
     
     <p>{{ movie.rate_average }}</p>
     <hr> -->
-    <star-rating 
+    
+    
+    <!-- <star-rating 
     v-model='rating'
     v-bind:increment="1"
     v-bind:max-rating="5"
     @rating-selected = "setRating">
 
-    </star-rating>
+    </star-rating> -->
     
-    <comment-list :comments="movie.comments">
-    </comment-list> 
-
+    
+    
+    
+    
     <!-- 틀 -->
+    <div class="my-5">
+      <hr>
+    </div>
     <div class="container">
       <div class="">
         
         <!-- poster & provider -->
-        <div class="row container vw-100" name="poster-provider" >
+        <div class="row row-cols-1 row-cols-sm-2 " name="poster-provider" >
           <!-- :style="`background-image:url(${tmdb+movie.poster_path}); overflow:hidden;`" -->
-            <div class="col-6 poster container">
-                <img :src="tmdb+movie.poster_path" class="poster">
-              
-           
+            <div class="col poster container">
+                <img :src="tmdb+movie.poster_path" class="row-8 poster">
+  
+                <div class="row-2">
+                  <div class="col">
+                    <h3>BGM RATES:{{movie.rate_average}}</h3>
+                  </div>
+                  <star-rating 
+                      v-model='rating'
+                      v-bind:increment="1"
+                      v-bind:max-rating="5"
+                      @rating-selected = "setRating"
+                      >
+                      
+                  </star-rating>
+                </div>
+                <div class="row-2">
+                 <h3>WATCH ON</h3>
+                 <div v-for= 'provider in movie.providers' :key='provider.provider_name'>
+                  <a :href="provider.address">
+                    <img :src="tmdb+provider.logo_path" alt="logo" width="50" height="50">
+                  </a>
+                 </div>
+                </div>
+            
             </div>
-            <div class="col-6">
-              <div class="row-2">
-                provider
+          
+          <!-- title&star&overview -->  
+            <div class="col">
+              <div class="row">
+                <h1>{{movie.title}}</h1>
               </div>
+              <div class="row">
+                <h5>{{movie.original_title}}</h5>
+              </div>
+              <div class="row">
+                <h5>{{movie.release_date}}</h5>
+              </div>
+              <div class="row">
+                <h5>{{movie.runtime}}</h5>
+              </div>
+              <div class="row">
+                <h5 v-for="genre in movie.genres" :key='genre.genre_name'>{{genre.genre_name}}</h5>
+              </div>
+                <hr>
+              <div class="row">
+                <h3>{{movie.overview}}</h3>
+              </div>
+              
+              
+            
             </div>
         </div>
         
-        <!-- title&star&overview -->
         <div class="row" name="title-star-overview">
           <div class="row" name="title-star">
-            <div class="col">
-              title
-            </div>
-            <div class="col">
-              star
-            </div>
+            
           </div>
           
-          <div class="row">overview</div>
         </div>
 
         
         <!-- overview -->
-        <div class="row">comment
+        <div class="row">
+          <comment-list :comments="movie.comments">
+          </comment-list> 
         </div>
       </div>
     </div>
-    
     </div>
+   
 </template>
 
 
@@ -126,4 +169,7 @@
 .vw-100{
   width: 100vw;
 }
+
+    
+
 </style>
