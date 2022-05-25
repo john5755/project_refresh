@@ -1,29 +1,32 @@
 <template>
   <div>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+      <div class="carousel-inner d-flex">
         <div class="carousel-item active">
-        <div :style="{'backgroundImage':'url('+ tmdb + first_movie.poster_path +')',
-                      'backgroundSize':'cover',
-                      'filter': 'brightness(88%)'}" 
-              id="background1"
-              class="justify-content-center d-flex">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-          <div class="col-md-4">
-            <img :src="tmdb+first_movie.poster_path" class="img-fluid rounded-start" alt="...">
+          <div :style="{'backgroundImage':'url('+ tmdb + first_movie.poster_path +')',
+                        'backgroundSize':'cover',
+                        'filter': 'brightness(88%)'}" 
+                id="background1"
+                class="justify-content-center d-flex">
+            <div class="card mb-3 row-2" style="max-width: 540px;" id="first">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img :src="tmdb+first_movie.poster_path" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ first_movie.title }}</h5>
+                    <p class="card-text">{{ first_movie.overview }}</p>
+                    <router-link 
+                      :to="{ name: 'detail', params: { movieId: first_movie.movie_id } }"
+                      class="btn btn-primary">
+                      GO TO DETAIL
+                    </router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        </div>
-        </div>
-
-        </div>
         </div>      
         <div v-for="movie in forMovies" :key="movie.movie_id" class="carousel-item">
         <home-movie
@@ -178,10 +181,22 @@ import { mapActions, mapGetters } from 'vuex'
 
 #carouselExampleControls{
   height: 100vh;
+  display: flex;
 }
 
 #background1{
-  background: linear-gradient(to top, black, rgb(10, 28, 38))
+  background: linear-gradient(to top, black, rgb(10, 28, 38));
+  height: 100vh;
 }
+
+#first{
+  height: 37vh;
+  position: relative;
+  top: 13em; 
+}
+
+/* .carousel-inner{
+  width: 100px;
+} */
 
 </style>

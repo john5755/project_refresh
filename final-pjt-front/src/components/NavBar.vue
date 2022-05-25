@@ -45,4 +45,9 @@
   right: 1.65em;
 }
 
+/* .navbar{
+  position: fixed;
+  top: 0;
+} */
+
 </style>

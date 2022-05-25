@@ -200,7 +200,7 @@ def download(request):
     
 
     movie_ids = []
-    for page in range(1,6):
+    for page in range(6,1000):
         params = {
             'api_key' : api_key,
             'language' : 'ko',
