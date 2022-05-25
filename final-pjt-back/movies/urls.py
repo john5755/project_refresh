@@ -10,6 +10,7 @@ urlpatterns = [
     path('provider/', views.provider),
     path('provider2/', views.provider2),
     path('providerlink/', views.providerlink),
+    path('image/', views.image),
 
     #movie
     path('movielist/', views.movie_list, name='movie_list'),

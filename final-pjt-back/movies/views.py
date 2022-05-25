@@ -367,3 +367,18 @@ def genre(request):
         genre.save()
 
 
+def image(request):
+    movies = get_list_or_404(Movie)
+    params = {
+        'api_key' : api_key,
+        'language' : 'ko',
+    }
+    for movie in movies:
+        movie_id = movie.movie_id
+        path = f'/movie/{movie_id}/images'
+        response = requests.get(BASE_URL + path, params=params)
+        image_path_list = response.json()['backdrops']
+        if image_path_list:
+            image_path = image_path_list[0]['file_path']
+            movie.image_path = image_path
+        movie.save()
