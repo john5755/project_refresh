@@ -1,41 +1,84 @@
 <template>
   <div>
-    <h1>{{ profile.username }}</h1>
+    <h1>{{ profile.username }}'s profile</h1>
+
+
+   
 
     <div class="container justify-content-center">
-      <h1>SIGN UP</h1>
+      
       <div class="row d-flex justify-content-center">
       <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
       
+      <!-- 프로필 form -->
+      <!-- 위치: componet/SigupForm  -->
       <signup-form :profile="profile" action="EDIT">
       </signup-form> 
 
-    <!-- <form @submit.prevent="onSubmit">
-      <div>
-        <label for="title">title: </label>
-        <input v-model="newArticle.title" type="text" id="title" />
+      
+      
+      <!-- modal trigger -->
+      <!-- 1. 탈퇴 -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#withdraw">
+        회원 탈퇴
+      </button>
+      
+      <div class="modal fade" id="withdraw" tabindex="-1" aria-labelledby="withdrawLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="withdrawLabel">회원 탈퇴</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+              정말 탈퇴하실거에요???
+            </div>
+            <div class="modal-footer">
+              <button @click="deleteUser(profile.pk)" type="button" class="btn btn-primary close">탈퇴</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
       </div>
-    <div>
-      <label for="content">contnet: </label>
-      <textarea v-model="newArticle.content" type="text" id="content"></textarea>
+      
+      
+      
+      
+      <!-- 2. 로그인 기록 삭제 + 파트너 기록 반환 -->
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resetHistory">
+        시청 기록 삭제
+      </button>
+      
+      <div class="modal fade" id="resetHistory" tabindex="-1" aria-labelledby="resetHistoryLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="resetHistoryLabel">BREAK UP</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+              정말 기억을 삭제하시겠습니까?
+            </div>
+            <div class="modal-footer">
+              <button @click="onResetHistory" type="button" class="btn btn-primary close">삭제</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    
+    <!-- <button @click="deleteUser(profile.pk)">profile delete</button> -->
+    <!-- <button @click="onResetHistory">그/그녀와의 기억 지우기 ㅋㅋ</button> -->
+    <!-- <p>{{profile.partner_id}} </p> -->
+    </div>
     </div>
     
-    <div>
-      <button>{{ action }}</button>
     </div>
-  </form> -->
-    
-      <h1>{{profile.favorite_genre}}</h1> 
-    
-    
-    
-    <button @click="deleteUser(profile.pk)">profile delete</button>
-    <button @click="onResetHistory">그/그녀와의 기억 지우기 ㅋㅋ</button>
-    <p>{{profile.partner_id}} </p>
-  </div>
-  </div>
-  
-  </div>
   </div>
 </template>
 
