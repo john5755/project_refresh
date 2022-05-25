@@ -1,12 +1,12 @@
 <template>
   <div>
     
-    <h1>{{ movie.title }}</h1>
     
-    <!-- 대표이미지 -->
+    
+<!--    
     <div><img :src="tmdb+movie.poster_path" alt="poster"></div>
     
-    <!-- provider links -->
+   
     <div v-for= 'provider in movie.providers' :key='provider.provider_name'>
       <a :href="provider.address">
         <img :src="tmdb+provider.logo_path" alt="logo" width="50" height="50">
@@ -14,7 +14,7 @@
     </div>
     
     <p>{{ movie.rate_average }}</p>
-    <hr>
+    <hr> -->
     <star-rating 
     v-model='rating'
     v-bind:increment="1"
@@ -25,10 +25,52 @@
     
     <comment-list :comments="movie.comments">
     </comment-list> 
-    
 
-  </div>
+    <!-- 틀 -->
+    <div class="container">
+      <div class="">
+        
+        <!-- poster & provider -->
+        <div class="row container vw-100" name="poster-provider" >
+          <!-- :style="`background-image:url(${tmdb+movie.poster_path}); overflow:hidden;`" -->
+            <div class="col-6 poster container">
+                <img :src="tmdb+movie.poster_path" class="poster">
+              
+           
+            </div>
+            <div class="col-6">
+              <div class="row-2">
+                provider
+              </div>
+            </div>
+        </div>
+        
+        <!-- title&star&overview -->
+        <div class="row" name="title-star-overview">
+          <div class="row" name="title-star">
+            <div class="col">
+              title
+            </div>
+            <div class="col">
+              star
+            </div>
+          </div>
+          
+          <div class="row">overview</div>
+        </div>
+
+        
+        <!-- overview -->
+        <div class="row">comment
+        </div>
+      </div>
+    </div>
+    
+    </div>
 </template>
+
+
+
 
 <script>
   import StarRating from 'vue-star-rating'
@@ -76,4 +118,12 @@
   }
 </script>
 
-<style></style>
+<style>
+.poster{
+  max-width: 100%;
+  
+}
+.vw-100{
+  width: 100vw;
+}
+</style>
