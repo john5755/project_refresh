@@ -1,5 +1,5 @@
 <template>
-  <nav  class="navbar navbar-expand-lg bg-secondary">
+  <nav  class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">        
         <ul class="navbar-nav justify-content-between">
@@ -37,6 +37,7 @@
 <style>
 .navbar-nav{
   width: 100%;
+  color: rgb(10, 28, 38);
 }
 
 .home-btn{

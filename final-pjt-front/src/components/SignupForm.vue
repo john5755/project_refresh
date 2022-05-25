@@ -248,7 +248,7 @@ import { mapActions, mapGetters } from 'vuex'
 </script>
 
 <style>
-body{background:royalblue}
+
 fieldset{padding:50px}
 .form-group{
   margin-top: 1rem;

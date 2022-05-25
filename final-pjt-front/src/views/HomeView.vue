@@ -2,22 +2,28 @@
   <div>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active justify">
-           <div :style="{'backgroundImage':'url('+ tmdb + first_movie.poster_path +')',
-    'backgroundSize':'cover',
-    'filter': 'brightness(88%)'}">   
-            <h1 class="text-body display-1 fw-bold text-start">{{ first_movie.title }}</h1>
-            <p class="display-2">{{ first_movie.tagline }}</p>
-            <p class="display-5 fw-bold">{{ first_movie.overview }}</p>
-            <p>{{ first_movie.rate_average}}</p>    
-            <hr>
-            <!-- detail 연결 -->
-            <router-link 
-              :to="{ name: 'detail', params: { movieId: first_movie.movie_id } }">
-              <img :src="tmdb+first_movie.poster_path" alt="poster">
-            </router-link>
-            <hr>
+        <div class="carousel-item active">
+        <div :style="{'backgroundImage':'url('+ tmdb + first_movie.poster_path +')',
+                      'backgroundSize':'cover',
+                      'filter': 'brightness(88%)'}" 
+              id="background1"
+              class="justify-content-center d-flex">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+          <div class="col-md-4">
+            <img :src="tmdb+first_movie.poster_path" class="img-fluid rounded-start" alt="...">
           </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        </div>
         </div>      
         <div v-for="movie in forMovies" :key="movie.movie_id" class="carousel-item">
         <home-movie
@@ -32,13 +38,14 @@
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-      </button>   
-      <ol class="carousel-indicators">
-        <li data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
+      </button>
+      <div>
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
           :style="{'backgroundImage':'url('+ tmdb + first_movie.poster_path +')',
           'backgroundSize':'cover',
-          'width': '90px',
-          'height': '90px',
+          'width': '8rem',
+          'height': '10rem',
           'position': 'relative',
           'margin': '10px' }">
           <!-- <img :src="tmdb+ movies[0].poster_path" alt="" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"> -->
@@ -46,8 +53,8 @@
         <li data-bs-target="#carouselExampleControls" data-bs-slide-to="1" class="active"
           :style="{'backgroundImage':'url('+ tmdb + movies[1].poster_path +')',
           'backgroundSize':'cover',
-          'width': '90px',
-          'height': '90px',
+          'width': '8rem',
+          'height': '10rem',
           'position': 'relative',
           'margin': '10px' }">
           <!-- <img :src="tmdb+ movies[0].poster_path" alt="" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"> -->
@@ -55,8 +62,8 @@
         <li data-bs-target="#carouselExampleControls" data-bs-slide-to="2" class="active"
           :style="{'backgroundImage':'url('+ tmdb + movies[2].poster_path +')',
           'backgroundSize':'cover',
-          'width': '90px',
-          'height': '90px',
+          'width': '8rem',
+          'height': '10rem',
           'position': 'relative',
           'margin': '10px'}">
           <!-- <img :src="tmdb+ movies[0].poster_path" alt="" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"> -->
@@ -64,8 +71,8 @@
         <li data-bs-target="#carouselExampleControls" data-bs-slide-to="3" class="active"
           :style="{'backgroundImage':'url('+ tmdb + movies[3].poster_path +')',
           'backgroundSize':'cover',
-          'width': '90px',
-          'height': '90px',
+          'width': '8rem',
+          'height': '10rem',
           'position': 'relative',
           'margin': '10px'}">
           <!-- <img :src="tmdb+ movies[0].poster_path" alt="" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"> -->
@@ -80,14 +87,28 @@
           <!-- <img :src="tmdb+ movies[0].poster_path" alt="" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"> -->
         </li>
       </ol>
+      </div>  
     </div>
         <!-- <div class="container">
       <div class="row">
-        <div class="col-4">
-          <div class="card">1</div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <router-link 
+                :to="{ name: 'detail', params: { movieId: first_movie.movie_id } }">
+                <img :src="tmdb+first_movie.poster_path" alt="poster">
+              </router-link>
+            </div>
+          </div>
         </div>
-        <div class="col-4">
-          <div class="card">1</div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">{{ first_movie.title }}</div>
+              <div class="card-body">
+                <h5 class="card-title">{{ first_movie.tagline }}</h5>
+                <p class="card-text">{{ first_movie.overview }}</p>
+              </div>
+          </div>
         </div>
       </div>
     </div> -->
@@ -157,6 +178,10 @@ import { mapActions, mapGetters } from 'vuex'
 
 #carouselExampleControls{
   height: 100vh;
+}
+
+#background1{
+  background: linear-gradient(to top, black, rgb(10, 28, 38))
 }
 
 </style>
