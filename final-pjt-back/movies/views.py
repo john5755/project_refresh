@@ -37,7 +37,9 @@ def create_rating(request, movie_pk):
     
     serializer = RateSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
-        # Rate.objects.filter(user=user).delete()
+        rates = Rate.objects.filter(user=user, movie=movie)
+        if rates:
+            rates.delete()
         serializer.save(movie=movie, user=user)
         rate_average = Rate.objects.filter(movie=movie).aggregate(Avg('bgm_rate'))['bgm_rate__avg']
         movie.rate_average = rate_average

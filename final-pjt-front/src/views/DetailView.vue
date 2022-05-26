@@ -92,7 +92,7 @@
               <div class="row">
                 <hr>
                 <h5 class="text-start">BGM RATES&nbsp;&nbsp;&nbsp;</h5>
-                <h1 class="text-start">{{movie.rate_average}}</h1>
+                <h1 class="text-start">{{ rate }}</h1>
               </div>
               <hr>
               <div class="row">
@@ -171,6 +171,9 @@
       // likeCount() {
       //   return this.article.like_users?.length
       // }
+      rate(){
+        return this.movie.rate_average.toFixed(2)
+      }
     },
     methods: {
       ...mapActions([
