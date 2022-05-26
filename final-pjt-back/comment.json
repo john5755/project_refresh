@@ -1,0 +1,57 @@
+[
+{
+    "model": "movies.comment",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "movie": 635302,
+        "content": "d",
+        "created_at": "2022-05-23T04:37:42.330Z",
+        "updated_at": "2022-05-23T04:37:42.330Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "movie": 635302,
+        "content": "d",
+        "created_at": "2022-05-23T04:37:45.073Z",
+        "updated_at": "2022-05-23T04:37:45.073Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "movie": 635302,
+        "content": "fasdf",
+        "created_at": "2022-05-23T04:37:47.077Z",
+        "updated_at": "2022-05-23T04:37:47.077Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 4,
+    "fields": {
+        "user": 1,
+        "movie": 955971,
+        "content": "´ñ±Û",
+        "created_at": "2022-05-23T04:50:11.335Z",
+        "updated_at": "2022-05-23T04:50:11.335Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 5,
+    "fields": {
+        "user": 2,
+        "movie": 22,
+        "content": "´ñ±Û ~~~~",
+        "created_at": "2022-05-26T12:20:42.088Z",
+        "updated_at": "2022-05-26T12:20:42.088Z"
+    }
+}
+]

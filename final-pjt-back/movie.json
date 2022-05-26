@@ -1,0 +1,922 @@
+[
+{
+    "model": "movies.movie",
+    "pk": 22,
+    "fields": {
+        "poster_path": "/3ovejwQO4fKOWx4VgGBJeT8CKCn.jpg",
+        "original_title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "title": "캐리비안의 해적: 블랙펄의 저주",
+        "tagline": "저주받은 황금이 해적들에게 저주를 내렸다",
+        "overview": "잭 스패로우는 10년 전의 반란 사건으로 자신의 배 블랙펄을 빼앗긴 해적 선장이다. 혼자 대양을 떠돌던 그는 자메이카의 로열포트에 이르러 유령선처럼 변해버린 블랙펄과 재회하게 된다. 아즈텍의 황금을 훔친 블랙펄의 선원들은 영원히 죽지 못하는 저주에 걸린 처지. 보물을 모두 제자리에 돌려놓고 피의 제물을 바쳐야만 고대 신들이 내린 저주를 풀 수 있다. 그들은 로열포트를 습격해 아즈텍의 마지막 목걸이를 가진 총독의 딸 엘리자베스를 납치하고, 엘리자베스를 사랑하는 어린 시절 친구 윌과 스패로우는 그 뒤를 쫓는데...",
+        "release_date": "2003-07-09",
+        "runtime": 143,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 58,
+    "fields": {
+        "poster_path": "/6tD4oT7C01aZLVfoZDz5VFVbJCi.jpg",
+        "original_title": "Pirates of the Caribbean: Dead Man's Chest",
+        "title": "캐리비안의 해적: 망자의 함",
+        "tagline": "블랙 펄, 그 이후",
+        "overview": "잭 스패로우는 블랙펄을 되찾아 포트 로열을 떠났지만 그를 기다리는 것은 수평선만이 아니었다. 유령선 플라잉 더치맨의 선장 데이비 존스는 잭이 자신에게 피로 진 빚이 있다면서 빚을 갚거나 영혼을 내놓으라고 요구한다. 불행 중 다행한 것은 잭에게 피의 빚 외에도 중매의 은총이 있었다는 것. 결혼을 앞둔 윌 터너와 엘리자베스 스완은 만사를 제쳐두고 옛 친구를 도우러 온다. 잭을 구할 수 있는 단 한 가지 방법은 세상 끝에 있다는 망자의 함을 찾는 것 뿐인데...",
+        "release_date": "2006-07-06",
+        "runtime": 151,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 285,
+    "fields": {
+        "poster_path": "/bTotG6tZERQqfKr2TDjwdjW8It4.jpg",
+        "original_title": "Pirates of the Caribbean: At World's End",
+        "title": "캐리비안의 해적: 세상의 끝에서",
+        "tagline": "전 세계가 세상의 끝에서 만난다",
+        "overview": "윌 터너와 엘리자베스 스완, 바르보사 선장은 바다괴물 크라켄에 잡아먹힌 잭 스패로우를 구하는 데 도움을 얻기 위해 싱가포르의 해적 사오펭을 찾아간다. 이들은 잭 스패로우가 있어야만 해적연맹의 아홉 영주를 모아 연합함대를 구성할 수 있고, 해적 소탕에 쌍심지를 켠 동인도회사에 맞설 수 있다. 동인도회사의 커틀러 베켓 경은 유령선 플라잉 더치맨과 그 선장 데비 존스를 수하에 거느리게 된 터. 이 힘이 막강해서, 해적 연합함대는 다시 바다의 여신 칼립소에게 도움을 요청하기로 한다.",
+        "release_date": "2007-05-19",
+        "runtime": 169,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 1865,
+    "fields": {
+        "poster_path": "/osJVVjkHmoO5WoJfbBsImYrKWIb.jpg",
+        "original_title": "Pirates of the Caribbean: On Stranger Tides",
+        "title": "캐리비안의 해적: 낯선 조류",
+        "tagline": "그 명성을 넘어 그들이 새로운 항해를 시작한다",
+        "overview": "부두교의 주술을 부리던  검은 수염은 다리가 한쪽인 남자에게 죽게 된다는 예언을 듣게 된다. 자신의 수명을 늘리기 위해 검은 수염은 젊음의 샘을 찾으러 떠나고, 바르보사 또한 검은수염에게 복수를 하기 위해 그를 뒤쫒는다. 한편 영국에서 블랙펄의 선장이 선원을 모집한다는 소문을 듣게 된 잭 스패로우는 자신을 사칭하는 사기꾼을 잡으려다 영국 왕실에 체포되고, 영국의 국왕은 잭 스패로우에게 젊음의 샘으로 가는 길을 안내하라고 명령하고, 이에 필요한 선장과 배, 선원을 모두 내 주겠다고 하는데...",
+        "release_date": "2011-05-14",
+        "runtime": 137,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 19995,
+    "fields": {
+        "poster_path": "/zygmx5abXeDpr3fWYX4jlXFZ1wh.jpg",
+        "original_title": "Avatar",
+        "title": "아바타",
+        "tagline": "새로운 세계가 열린다",
+        "overview": "가까운 미래, 지구는 에너지 고갈 문제를 해결하기 위해 머나먼 행성 판도라에서 대체 자원을 채굴하기 시작한다. 하지만 판도라의 독성을 지닌 대기로 인해 자원 획득에 어려움을 겪게 된 인류는 판도라의 토착민 나비의 외형에 인간의 의식을 주입, 원격 조종이 가능한 새로운 생명체를 탄생시키는 프로그램을 개발한다. 한편 하반신이 마비된 전직 해병대원 제이크 설리는 아바타 프로그램에 참가할 것을 제안받는다. 그 곳에서 자신의 아바타를 통해 자유롭게 걸을 수 있게 된 제이크는 자원 채굴을 막으려는 나비의 무리에 침투하라는 임무를 부여받는데...",
+        "release_date": "2009-12-10",
+        "runtime": 162,
+        "rate_average": 5.0,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 284052,
+    "fields": {
+        "poster_path": "/xA7ic72L0mejJX1SYMU38F7wwiF.jpg",
+        "original_title": "Doctor Strange",
+        "title": "닥터 스트레인지",
+        "tagline": "당신이 알고 있는 현실이 뒤바뀐다",
+        "overview": "오만함과 실력 모두 최고인 신경외과 의사 닥터 스티븐 스트레인지는 운전 중에 핸드폰을 한 대가로 두 손의 신경이 끊어지는 심각한 부상을 입고 큰 상심에 빠진다. 게다가 모난 말들로 사랑하는 여인 크리스틴 팔머마저 그의 곁을 떠나게 만든다. 그는 치료를 위해 히말라야의 영적 지도자, 에인션트 원을 만나 마지막 희망을 걸고 수련을 시작한다. 스트레인지는 빠르게 마법을 터득해 나가는 동시에 세계의 작동원리와 우주를 정복하려는 도르마무 일당의 계략을 알게 된다.",
+        "release_date": "2016-10-25",
+        "runtime": 115,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 294793,
+    "fields": {
+        "poster_path": "/g4tMniKxol1TBJrHlAtiDjjlx4Q.jpg",
+        "original_title": "All the Old Knives",
+        "title": "배신의 만찬",
+        "tagline": "",
+        "overview": "CIA 요원이자 전 연인(크리스 파인, 탠디 뉴턴)이 구출 임무를 실패하고 몇 년이 지난 뒤 재회하고, 업무와 개인적인 감정을 구분하지 못한다. 국제 스파이 행위, 도덕적 딜레마, 그리고 치명적인 배신을 다룬 눈을 뗄 수 없는 이야기다.",
+        "release_date": "2022-04-08",
+        "runtime": 101,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 299536,
+    "fields": {
+        "poster_path": "/kmP6viwzcEkZeoi1LaVcQemcvZh.jpg",
+        "original_title": "Avengers: Infinity War",
+        "title": "어벤져스: 인피니티 워",
+        "tagline": "영화의 역사를 뒤바꿀 마블의 클라이맥스!",
+        "overview": "타노스는 6개의 인피니티 스톤을 획득해 신으로 군림하려 한다. 그것은 곧 인류의 절반을 학살해 우주의 균형을 맞추겠다는 뜻. 타노스는 닥터 스트레인지가 소유한 타임 스톤, 비전의 이마에 박혀 있는 마인드 스톤을 차지하기 위해 지구를 침략한다. 아이언맨과 스파이더맨은 가디언즈 오브 갤럭시의 멤버들과 타노스를 상대한다. 지구에선 캡틴 아메리카, 완다, 블랙 위도우, 블랙 팬서 등이 비전을 지키기 위해 뭉친다.",
+        "release_date": "2018-04-25",
+        "runtime": 149,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 335787,
+    "fields": {
+        "poster_path": "/2R8smeSDkPx6TKIRveKPXi0JVI6.jpg",
+        "original_title": "Uncharted",
+        "title": "언차티드",
+        "tagline": "모든 것을 걸었다면 세상 누구보다 빠르게 찾아야 한다!",
+        "overview": "평범한 삶을 살던 네이선은 인생을 바꿀 뜻밖의 제안을 받는다. 그의 미션은 크루와 함께 사라진 형과 500년 전 잃어버린 천문학적인 가치를 지닌 트레져를 찾아내는 것. 그러나 몬카다의 위협 속, 누구보다 빠르게 미지의 세계에 닿기 위해 결단을 내려야만 하는데…",
+        "release_date": "2022-02-10",
+        "runtime": 116,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 337404,
+    "fields": {
+        "poster_path": "/ejnSfKiUgqyiqdiLMc1wGAwvyTN.jpg",
+        "original_title": "Cruella",
+        "title": "크루엘라",
+        "tagline": "안녕, 잔인한 세상이여",
+        "overview": "재능은 있지만 밑바닥 인생을 살던 에스텔라는 우여곡절 끝에 런던에 오게 된다. 그곳에서 운명처럼 재스퍼와 호레이스를 만난 에스텔라는 뛰어난 패션 감각을 이용해 완벽한 변장과 빠른 손놀림으로 런던 거리를 싹쓸이한다. 도둑질이 지겹게 느껴질 때 쯤, 꿈에 그리던 리버티 백화점에 들어가게 된 에스텔라. 그곳에서 런던 패션계를 꽉 쥐고 있는 남작 부인을 만나 충격적 사건을 겪게 되며, 에스텔라는 런던 패션계를 발칵 뒤집을 파격 아이콘 크루엘라로 새롭게 태어나게 되는데...",
+        "release_date": "2021-05-26",
+        "runtime": 134,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 338953,
+    "fields": {
+        "poster_path": "/uvQbXjMgC5weQepx4jLJJ60H3N0.jpg",
+        "original_title": "Fantastic Beasts: The Secrets of Dumbledore",
+        "title": "신비한 동물들과 덤블도어의 비밀",
+        "tagline": "가장 위험한 마법에 맞선, 세상을 구할 전쟁이 시작된다",
+        "overview": "1930년대, 제2차 세계대전에 마법사들이 개입하게 되면서 강력한 어둠의 마법사 그린델왈드의 힘이 급속도로 커진다. 덤블도어는 뉴트 스캐맨더에게 위대한 마법사 가문 후손, 마법학교의 유능한 교사, 머글 등으로 이루어진 팀에게 임무를 맡긴다. 이에 뉴트와 친구들은 머글과의 전쟁을 선포한 그린델왈드와 추종자들, 그의 위험한 신비한 동물들에 맞서 세상을 구할 거대한 전쟁에 나선다. 한편 전쟁의 위기가 최고조로 달한 상황 속에서 덤블도어는 더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데...",
+        "release_date": "2022-04-06",
+        "runtime": 142,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 361743,
+    "fields": {
+        "poster_path": "/jMLiTgCo0vXJuwMzZGoNOUPfuj7.jpg",
+        "original_title": "Top Gun: Maverick",
+        "title": "탑 건: 매버릭",
+        "tagline": "한순간의 실수도 용납되지 않는 하늘 위, 가장 압도적인 비행이 시작된다!",
+        "overview": "최고의 파일럿이자 전설적인 인물 매버릭은 자신이 졸업한 훈련학교 교관으로 발탁된다. 그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만 실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도된다. 매버릭의 지휘 아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자 매버릭은 자신이 가르친 동료들과 함께 마지막이 될지 모를 하늘 위 비행에 나서는데…",
+        "release_date": "2022-05-24",
+        "runtime": 131,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 406759,
+    "fields": {
+        "poster_path": "/2xmJCxrt5t2dFhvwvmxZ5Cy577j.jpg",
+        "original_title": "Moonfall",
+        "title": "문폴",
+        "tagline": "인류 멸망 D-30일, 추락하는 달을 반드시 멈춰야 한다",
+        "overview": "궤도를 이탈한 달이 지구를 향해 떨어지기 시작하면서 지구의 중력과 모든 물리적인 법칙이 붕괴된다. 거대한 해일과 지진, 화산폭발, 쓰나미와 이상기후까지 상상조차 불가능했던 모든 재난으로 전 세계는 공포와 혼란에 빠진다. 달과 충돌까지 남은 시간은 단 30일. NASA 연구원 파울러, 전직 우주 비행사 브라이언, 그리고 우주 덕후 KC는 달을 막을 방법을 찾기 위해 마지막 우주선에 오른다.",
+        "release_date": "2022-02-03",
+        "runtime": 130,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 414906,
+    "fields": {
+        "poster_path": "/bCz71ysciwNL2xddSm25ufrgZ7V.jpg",
+        "original_title": "The Batman",
+        "title": "더 배트맨",
+        "tagline": "영웅이 될 것인가, 악당이 될 것인가",
+        "overview": "지난 2년 간 고담시의 어둠 속에서 범법자들을 응징하며 배트맨으로 살아온 브루스 웨인. 알프레드와 제임스 고든 경위의 도움 아래 그는 도시의 부패한 공직자들과 고위 관료들 사이에서 복수의 화신으로 활약한다. 고담의 시장 선거를 앞두고 고담의 엘리트 집단을 목표로 잔악한 연쇄살인을 저지르는 수수께끼 킬러 리들러가 나타나자, 최고의 탐정 브루스 웨인이 수사에 나서고 남겨진 단서를 풀어가며 캣우먼, 펭귄, 카마인 팔코네, 리들러를 차례대로 만난다. 사이코 범인의 미스터리를 수사하면서 그 모든 증거가 자신을 향한 의도적인 메시지였음을 깨닫고,  리들러에게 농락 당한 배트맨은 광기에 사로잡힌다. 범인의 무자비한 계획을 막고 오랫동안 고담시를 썩게 만든 권력 부패의 고리를 끊어야 하지만, 부모님의 죽음에 얽힌 진실이 밝혀지자 복수와 정의 사이에서 갈등하는데...",
+        "release_date": "2022-03-01",
+        "runtime": 176,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 425909,
+    "fields": {
+        "poster_path": "/in2aUEUaFxBJZniu9qZh5P9s1Tw.jpg",
+        "original_title": "Ghostbusters: Afterlife",
+        "title": "고스트 버스터즈 라이즈",
+        "tagline": "새로운 세상이 열린다!",
+        "overview": "할아버지의 갑작스런 죽음으로 이사하게 된 트레버, 피비 남매는 남겨진 집에서 의문의 현상과 수상한 물건들을 마주한다. 집뿐 아니라 마을 전체가 설명할 수 없는 미스터리한 현상이 연이어 발생하는 가운데, 교사로 위장 취업한 지질학자 그루버슨과 이들은 세상의 종말과 관련된 비밀을 쫓기 시작하는데…",
+        "release_date": "2021-11-11",
+        "runtime": 124,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 438695,
+    "fields": {
+        "poster_path": "/xe8dVB2QiCxLWFV77V4dpZcOvYB.jpg",
+        "original_title": "Sing 2",
+        "title": "씽2게더",
+        "tagline": "전 세계가 주목한 스테이지! 함께 도전할 준비됐지?",
+        "overview": "대국민 오디션 이후 각자의 자리에서 꿈을 이루고 있는 버스터 문(매튜 맥커너히)과 크루들에게 레드 쇼어 시티에서 전 세계가 주목하는 사상 최고의 쇼가 펼쳐진다는 소식이 들려오고 버스터 문과 크루들은 도전에 나선다. 그러나 최고의 스테이지에 서기 위한 경쟁은 이전과는 비교도 할 수 없을 만큼 치열하고, 버스터 문은 완벽한 라이브를 위해 종적을 감춘 레전드 뮤지션 클레이(보노)를 캐스팅하겠다는 파격 선언을 하는데!",
+        "release_date": "2021-12-01",
+        "runtime": 110,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 453395,
+    "fields": {
+        "poster_path": "/vL5ktZauR0fZMDOHKjakb1idhuU.jpg",
+        "original_title": "Doctor Strange in the Multiverse of Madness",
+        "title": "닥터 스트레인지: 대혼돈의 멀티버스",
+        "tagline": "상상의 경계를 무너뜨릴 광기",
+        "overview": "끝없이 균열되는 차원과 뒤엉킨 시공간의 멀티버스가 열리며 오랜 동료들, 그리고 차원을 넘어 들어온 새로운 존재들을 맞닥뜨리게 된 닥터 스트레인지. 대혼돈 속, 그는 예상치 못한 극한의 적과 맞서 싸워야만 하는데….",
+        "release_date": "2022-05-04",
+        "runtime": 126,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 454626,
+    "fields": {
+        "poster_path": "/pMXOlasWr1IzHGH8HWw1ZTXs6rQ.jpg",
+        "original_title": "Sonic the Hedgehog",
+        "title": "수퍼 소닉",
+        "tagline": "세상을 구할 초고속 히어로의 탄생!",
+        "overview": "소리보다 빠른 초고속 고슴도치 히어로 '소닉'은 지구에 불시착한다. 그의 특별한 능력을 감지한 과학자 ‘닥터 로보트닉’은 세계 정복의 야욕을 채우려 하고, 경찰관 ‘톰’은 위험에 빠진 ‘소닉’을 돕기 위해 나서는데…! 과연, ‘소닉'은 천재 악당에 맞서 지구를 지킬 수 있을까?",
+        "release_date": "2020-02-12",
+        "runtime": 99,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 459151,
+    "fields": {
+        "poster_path": "/zGaeo3fNXCcnttUQMgZr1FW0t4V.jpg",
+        "original_title": "The Boss Baby: Family Business",
+        "title": "보스 베이비 2",
+        "tagline": "가족 같은 회사로 모십니다",
+        "overview": "베이비 주식회사의 레전드 보스 베이비에서 인생 만렙 CEO가 된 `테드`. 베이비인 줄 알았던 조카 `티나`가 알고 보니 베이비 주식회사 소속이라니! 뉴 보스 베이비 `티나`의 지시로 `테드`는 형과 함께 다시 베이비로 돌아가야만 하는데…",
+        "release_date": "2021-07-01",
+        "runtime": 107,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 460458,
+    "fields": {
+        "poster_path": "/3d1ij4MEw3h2AZv62C49ysDfuG1.jpg",
+        "original_title": "Resident Evil: Welcome to Raccoon City",
+        "title": "레지던트 이블: 라쿤시티",
+        "tagline": "모든 이야기는 이곳에서 시작되었다",
+        "overview": "거대 제약회사 '엄브렐라'가 철수한 후 폐허가 된 '라쿤시티'. 어릴 적 끔찍한 사건을 겪고 고향을 떠났던 클레어가 돌아온 그날 밤, 라쿤시티는 좀비 바이러스에 감염되어 순식간에 지옥으로 돌변한다. 남은 시간은 7시간, 죽음의 도시를 탈출하라!",
+        "release_date": "2021-11-24",
+        "runtime": 107,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 460465,
+    "fields": {
+        "poster_path": "/yvcNQv8fth51nWuaLwfpr50IRiO.jpg",
+        "original_title": "Mortal Kombat",
+        "title": "모탈 컴뱃",
+        "tagline": "제대로 터지는 R등급 액션의 신화!",
+        "overview": "어스렐름와 아웃월드의 최강 챔피언들이 지구의 운명을 걸고 벌이는 서바이벌 대혈전 모탈 컴뱃. MMA 격투 선수 콜 영은 대전을 앞두고 선택 받은 전사들을 사전에 제거하려는 서브제로의 공격을 받는다. 지구와 가족을 보호하고 자기 혈통의 비밀을 알아내기 위해 모탈 컴뱃 토너먼트에 참가해 죽음의 전투를 치러야 한다!",
+        "release_date": "2021-04-07",
+        "runtime": 110,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 476669,
+    "fields": {
+        "poster_path": "/vOai6V9hsIqZu15zDKydPmzu4EN.jpg",
+        "original_title": "The King's Man",
+        "title": "킹스맨: 퍼스트 에이전트",
+        "tagline": "잔혹한 기원을 확인하라",
+        "overview": "역사상 최악의 폭군들과 범죄자들이 모여 수백만 명을 학살하기 위한  전쟁을 모의하는 급박한 상황 속, 그들을 막아야 하는 한 사람이 있다. 비밀에 쌓여 있던 독립 정보 기관 ‘킹스맨’의 탄생을 확인하라!",
+        "release_date": "2021-12-22",
+        "runtime": 131,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 482321,
+    "fields": {
+        "poster_path": "/ljYdrF1faaWbzcrZuQ6BTqfVHcS.jpg",
+        "original_title": "Ron's Gone Wrong",
+        "title": "고장난 론",
+        "tagline": "당신의 영원한* 친구 (*배터리 수명은 다를 수 있음)",
+        "overview": "최첨단 소셜 AI 로봇 비봇이 모든 아이들의 친구가 되는 세상. 비봇을 갖는 것이 유일한 소원인 소심한 소년 바니에게도 드디어 론이라는 비봇이 생겼다. 그러나 첨단 디지털 기능과 소셜 미디어로 연결된 다른 비봇들과는 달리, 네트워크 접속이 불가능한 고장난 론. 자유분방하고 엉뚱한 론으로 인해 벌어지는 엉망진창, 스릴 넘치는 모험을 함께하며 바니는 진실한 우정이 무엇인지 점점 깨닫게 되는데..",
+        "release_date": "2021-10-15",
+        "runtime": 107,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 508943,
+    "fields": {
+        "poster_path": "/cgQMmwPtSInmIvoQLJhoByBelGA.jpg",
+        "original_title": "Luca",
+        "title": "루카",
+        "tagline": "조금 특별한 친구들의 여름 이야기",
+        "overview": "이탈리아 리비에라의 해변 마을. 마을 사람들 사이엔 인근에 바다괴물이 산다는 전설이 떠돈다. 실제로 바다에는 루카(제이콥 트렘블레이)를 비롯한 바다괴물 가족들이 산다. 루카의 부모는 루카에게 바다 밖을 경계하라 이르지만, 루카는 기어이 바다 밖 세상으로 향한다. 루카는 육지에선 인간의 모습으로 변하지만 물에 닿으면 바다괴물의 모습으로 돌아간다. 바다괴물 친구이자 육지 생활 선배인 알베르토(잭 딜런 그레이저)는 루카에게 두 다리로 걷는 법부터 자유와 일탈의 짜릿함까지 맛보게 한다. 급기야 인간 마을로 들어간 둘은 줄리아(엠마 버만)와 친구가 돼 함께 수영, 사이클, 파스타 빨리 먹기 3종 대회에 참가하는데...",
+        "release_date": "2021-06-17",
+        "runtime": 95,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 508947,
+    "fields": {
+        "poster_path": "/hsOhOcX7qDy7bPwbrt1OoITngrf.jpg",
+        "original_title": "Turning Red",
+        "title": "메이의 새빨간 비밀",
+        "tagline": "까칠한 사춘기! 건들지마, 털찐다",
+        "overview": "엄마의 착한 딸, 아니면 미운 13살? 성적도 우수하고 친구들과 사이도 좋은 데다 부모와도 친밀한 관계를 유지하고 있는, 똑 부러지면서도 엉뚱한 매력의 소유자 메이는 요즘 질풍노도의 시기를 겪느라 고민이 많다. 이 나이에 엄마의 과잉보호를 받자니 스트레스가 이만저만이 아닌 데다, 관심사, 인간관계, 신체 등 그녀의 모든 것이 변하고 있기 때문. 그런데 이 와중에 흥분하면 거대한 레서판다로 변신하는 비밀까지 떠안게 되다니! 아침도 먹어야 하고 학교도 가야 하는데, 이 엄청난 비밀을 어떻게 숨겨야 할까?",
+        "release_date": "2022-03-10",
+        "runtime": 100,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 512195,
+    "fields": {
+        "poster_path": "/gG06Uu6UQseYaPx1RU2PQjFEUKK.jpg",
+        "original_title": "Red Notice",
+        "title": "레드 노티스",
+        "tagline": "누가 최고의 도둑일까",
+        "overview": "인터폴이 중범죄 피의자를 대상으로 내리는 전 세계적 경보인 레드 노티스. 세계 곳곳에서 지명 수배범을 추적하고 체포하는 것이 그 목적이다. 어느 날 초유의 도난 사건이 발생하고, 그로 인해 FBI 최고의 프로파일러(드웨인 존슨)가 라이벌 관계의 두 범죄자(갤 가돗, 라이언 레이놀즈)와 만나면서 모든 게 엇나가기 시작한다. 늘 한발 앞서 도망치는 사기꾼을 잡기 위해 그들은 어쩔 수 없이 싫어도 이를 악물고 힘을 합쳐야 한다. 이제 무슨 일이 일어날지 그 누구도 장담할 수 없다.",
+        "release_date": "2021-11-04",
+        "runtime": 117,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 524434,
+    "fields": {
+        "poster_path": "/aNtAP8ZzUMdnCPoqYgVOcgI0Eh4.jpg",
+        "original_title": "Eternals",
+        "title": "이터널스",
+        "tagline": "태초에 그들이 있었다",
+        "overview": "이터널스는 7천년 전 우주선 도모를 타고 지구에 온 순간부터 지구를 사랑한 히어로들이다. 이들의 임무는 기괴한 크리처 데비안츠에게서 인간을 지키는 것. 임무를 부여한 이는 그들을 탄생시킨 천상의 존재 셀레스티얼이다. 이터널스는 시간의 흐름을 느낄 수 없기에, 공간을 기준 삼아 연대기를 구성하는 뱀파이어처럼 세계 곳곳에 흩어져 자신만의 삶을 살아가고 있다. 물질을 변화시키는 세르시는 런던에서 박물관 학자가 됐고, 우주의 기운을 총처럼 쏘는 킹고는 발리우드 배우로 살며, 타인을 조종하는 드루이그는 아마존에 소국을 만들었다. 괴력의 소유자 길가메시는 호주 사막에서 정신 건강이 위험해진 테나를 돌보며 살고 있다. 세르시는 데비안츠의 공세가 심해지자 오랜 연인 이카리스, 소녀처럼 보이는 불멸의 존재 스프라이트와 함께 이터널스를 불러모으기 시작한다.",
+        "release_date": "2021-11-03",
+        "runtime": 156,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 526896,
+    "fields": {
+        "poster_path": "/8uiV88A5eB7PjMTtY6lQBUZ0Cpl.jpg",
+        "original_title": "Morbius",
+        "title": "모비우스",
+        "tagline": "구원자인가, 파괴자인가",
+        "overview": "희귀혈액병을 앓고 있는 생화학자 모비우스는 동료인 마르틴과 함께 치료제 개발에 몰두한다. 흡혈 박쥐를 연구하던 중 마침내 치료제 개발에 성공한 모비우스는 새 생명과 강력한 힘을 얻게 되지만, 동시에 흡혈을 하지 않고는 생명을 유지할 수 없게 된다. 그러던 중 모비우스와 같은 병을 앓고 있던 그의 친구 마일로도 모비우스와 같은 힘을 얻게 되는데…",
+        "release_date": "2022-03-30",
+        "runtime": 104,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 545611,
+    "fields": {
+        "poster_path": "/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg",
+        "original_title": "Everything Everywhere All at Once",
+        "title": "에브리씽 에브리웨어 올 앳 원스",
+        "tagline": "",
+        "overview": "남편과 세탁소를 운영하며 근근히 살아가고 있는 이민자 이블린 왕. 20대 시절 남편과 순수한 사랑을 불태우며 모든 것을 뒤로 하고 미국으로 이민을 떠났지만, 50대가 된 지금은 세탁소 운영 등 온갖 일로 허덕이며 단란했던 가족과도 삐그덕거리는 등 고달프게 살고 있다. 세무조사를 받던 중 자신이 멀티버스의 여러 다른 자신들과 연결되어 있음을 알게 되고, 강력한 악의 기운으로부터 모든 우주와 가족을 구해내기 위한 모험에 나서게 되는데......",
+        "release_date": "2022-03-24",
+        "runtime": 139,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 550988,
+    "fields": {
+        "poster_path": "/sEYyQ4lW43jg77yTiTSRUNVdtMc.jpg",
+        "original_title": "Free Guy",
+        "title": "프리 가이",
+        "tagline": "내 안의 히어로가 깨어난다!",
+        "overview": "평범한 직장, 절친 그리고 한 잔의 커피.  평화로운 일상 속 때론 총격전과 날강도가 나타나는 버라이어티한 ‘프리시티’에 살고 있는 ‘가이’. 그에겐 뭐 하나 부족한 것이 없었다. 우연히 마주친 그녀에게 한눈에 반하기 전까지는…  갖은 노력 끝에 다시 만난 그녀는 ‘가이’가 비디오 게임 ‘프리시티’에 사는 배경 캐릭터이고, 이 세상은 곧 파괴될 거라 경고한다. 혼란에 빠진 ‘가이’ 그러나 그는 ‘프리시티’의 파괴를 막기 위해 더 이상 배경 캐릭터가 아닌, 히어로가 되기로 결심한다.",
+        "release_date": "2021-08-11",
+        "runtime": 115,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 566525,
+    "fields": {
+        "poster_path": "/14L4NGrqO4r7gJtVRiSRP5rNsL5.jpg",
+        "original_title": "Shang-Chi and the Legend of the Ten Rings",
+        "title": "샹치와 텐 링즈의 전설",
+        "tagline": "열 개의 힘, 단 하나의 운명",
+        "overview": "초인적인 능력을 가진 텐 링즈의 힘으로 수세기 동안 어둠의 세상을 지배해 온 웬우. 샹치는 아버지 웬우 밑에서 암살자로 훈련을 받았지만 이를 거부하고 평범함 삶을 선택한다. 샌프란시스코로 떠나와 자신의 진짜 이름을 숨긴 채 션이란 가명으로 살아가는 샹치. 웬우가 수장으로 있는 조직 텐 링즈의 일원인 레이저 피스트가 찾아와 샹치의 펜던트를 훔쳐가자 샹치는 친구 케이티와 함께 연이 끊겼던 동생 샤링을 염려하며 그녀가 숨어 지내는 마카오로 찾아간다. 텐 링즈의 마법 같은 힘을 통해 수천년 동안 지구의 역사를 혼란에 빠뜨렸던 웬우는 자신의 아들딸을 다시 불러들여 새로운 계략을 꾸민다.",
+        "release_date": "2021-09-01",
+        "runtime": 132,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 568124,
+    "fields": {
+        "poster_path": "/b8gz7UKMwMz39mz6EH5Jjicjdth.jpg",
+        "original_title": "Encanto",
+        "title": "엔칸토: 마법의 세계",
+        "tagline": "평범함도 특별해지는 이 곳",
+        "overview": "콜롬비아의 깊은 산 속, 놀라운 마법과 활기찬 매력이 넘치는 세계 엔칸토. 이곳을 만든 장본인은 마드리갈 가문의 기둥인 알마 할머니(마리아 세실리아 보테로)다. 그녀는 젊었을 때 세 쌍둥이를 데리고 이곳으로 오던 중에 위기를 맞았다. 그때 그녀가 들고 있던 촛불에 기적이 일어났고 그이후로 마법의 능력이 손주 세대까지 대물림된다. 3대에 걸친 이대가족은 음식으로 병을 고치는 능력, 꽃을 피우는 능력, 날씨를 조종 하는 능력 등 저마다 독특한 능력을 지니게 됐다. 하지만 가족 중 유일하게 미라벨(스테퍼니 비어트리즈)만 아무런 능력이 없다. 어느 날 엔칸토가 지닌 마법의 힘이 위험에 처하고 가족들은 점차 자신의 능력을 잃어가기 시작한다. 이를 감지한 미라벨은 유일하게 평범한 자신이 특별한 이 가족의 마지막 희망일지 모른다고 생각하는데...",
+        "release_date": "2021-11-24",
+        "runtime": 102,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 580489,
+    "fields": {
+        "poster_path": "/1Lh9LER4xRQ3INFFi2dfS2hpRwv.jpg",
+        "original_title": "Venom: Let There Be Carnage",
+        "title": "베놈 2: 렛 데어 비 카니지",
+        "tagline": "히어로의 시대는 끝났다",
+        "overview": "‘베놈'과 완벽한 파트너가 된 ‘에디 브록' 앞에 ‘클리터스 캐서디'가 ‘카니지'로 등장, 앞으로 닥칠 대혼돈의 세상을 예고한다. 대혼돈의 시대가 시작되고, 악을 악으로 처단할 것인가?",
+        "release_date": "2021-09-30",
+        "runtime": 97,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 585083,
+    "fields": {
+        "poster_path": "/6zt5l4DYV1kLPL5Vqz1kLq3THXD.jpg",
+        "original_title": "Hotel Transylvania: Transformania",
+        "title": "몬스터 호텔 4: 뒤바뀐 세계",
+        "tagline": "변화는 두려울 수 있다.",
+        "overview": "드락이 트랜실베니아 호텔을 딸 마비스와 사위 조니에게 넘길려고 한다.  그런데 조니의 형편없는 호텔 계획을 들은 드락은 걱정을 한다.  드라은 인간인 조니에게 오직 몬스터만 호텔 사업을 이끌어 갈 수 있다고 장난을 친다.  그러자 조니는 몬스터가 되기로 결심하고,  반헬싱의 신비한 발명품인 '몬스터피케이션 레이'가 엉망이 되면서  조이는 몬스터가 됐지만, 드락과 그의 친구들은 인간으로 변하게 된다.  과연, 드락과 조니는 그들이 저지른 실수들을 바로 잡을 수 있을까?",
+        "release_date": "2022-02-25",
+        "runtime": 87,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 585245,
+    "fields": {
+        "poster_path": "/mJwwkMKeR5XgHwexw9SJa6CiZY2.jpg",
+        "original_title": "Clifford the Big Red Dog",
+        "title": "클리포드 더 빅 레드 독",
+        "tagline": "“클리포드는 얼마나 더 커지는 거에요?”",
+        "overview": "뉴욕의 아파트로 이사 온 12살 소녀 에밀리. 새로운 학교에 고군분투하는 에밀리를 바쁜 엄마는 출장을 가면서 철없는 삼촌 케이시에게 맡기고 떠난다.  마법 동물 구조 센터를 지나던 에밀리는 운명처럼 작고 빨간 강아지를 만나게 되고, 우여곡절 끝에 함께하게 된다. 하지만 기쁨도 잠시, 작고 빨간 강아지 클리포드는 하루 아침에 3M가 넘게 커져버려 순식간에 뉴욕의 유명인사가 되어버린다. 엄마가 오기 전 클리포드를 되돌리려는 에밀리와 클리포드를 유전학 사업에 이용하려는 기업까지 뒤쫓으며 클리포드는 위험에 빠지고 마는데..!",
+        "release_date": "2021-11-10",
+        "runtime": 97,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 606402,
+    "fields": {
+        "poster_path": "/nOYyuJ2mNo6RWsFsTwApEyG3F4J.jpg",
+        "original_title": "야차",
+        "title": "야차",
+        "tagline": "",
+        "overview": "비밀공작팀과 팀의 악명 높은 리더를 감찰하기 위해 위험천만한 도시로 날아간 검사. 정직하게 살아온 그가 스파이들 사이의 치명적인 전쟁 속으로 뛰어든다.",
+        "release_date": "2022-04-08",
+        "runtime": 124,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 624860,
+    "fields": {
+        "poster_path": "/AvWlbyLk32HdvSrrSTYpjmXHEXC.jpg",
+        "original_title": "The Matrix Resurrections",
+        "title": "매트릭스: 리저렉션",
+        "tagline": "선택은 당신의 것, 날아오를 시간이다",
+        "overview": "토마스 앤더슨은 자신의 현실이 물리적 구성개념인지 아니면 정신적 구성개념인지 알아내기 위해 이번에도 흰 토끼를 따라가야 한다. 토마스, 아니 네오가 배운 게 있다면 비록 환상이라 할지라도 선택이야말로 매트릭스를 탈출할 유일한 길이라는 것이다. 물론 네오는 무엇을 해야 할지 이미 알고 있다. 그가 아직 모르는 사실은 이 새로운 버전의 매트릭스가 그 어느 때보다도 강력하고, 확고부동하고, 위험하다는 것이다.  평범한 일상과 그 이면에 놓여 있는 또 다른 세계, 두 개의 현실이 존재하는 세상에서 운명처럼 인류를 위해 다시 깨어난 구원자 네오. 빨간 약과 파란 약 중 어떤 것을 선택할 것인가?",
+        "release_date": "2021-12-16",
+        "runtime": 148,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 628900,
+    "fields": {
+        "poster_path": "/fZid9LbFTZV7NjM0qMwL1mPjhqu.jpg",
+        "original_title": "The Contractor",
+        "title": "더 컨트랙터",
+        "tagline": "국가를 위해 극비 작전에 뛰어든 남자",
+        "overview": "특수부대 중사 출신 ‘제임스 하퍼’는 전역을 명 받고 법의 테두리 밖에서 국가에 충성하는 극비 조직에 합류한다. 그에게 주어진 첫번째 미션은, 전세계를 혼란에 빠뜨릴 바이러스 테러를 막는 것. 그러나, 미션 수행 도중 거대한 음모에 휘말리게 되고 충격과 위기를 겪게 되는데… 더 이상 물러설 곳은 없다.  모든 것을 건, 새로운 미션이 시작된다!",
+        "release_date": "2022-03-10",
+        "runtime": 103,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 629542,
+    "fields": {
+        "poster_path": "/x6KSvale7iuxLhsrEfhYNoICyfK.jpg",
+        "original_title": "The Bad Guys",
+        "title": "배드 가이즈",
+        "tagline": "드림웍스 최초의 범죄오락액션 블록버스터! 어디 착한 짓 좀 해볼까?",
+        "overview": "작전 설계부터 금고 해제, 해킹, 액션, 위장까지 완벽한 팀플레이를 펼치는 자타공인 최고의 나쁜 녀석들이 한순간의 실수로 체포된다.  하지만 그들도 착해질 수 있다는 ‘마멀레이드 박사’의 주장으로 나쁜 녀석들은 바른 생활 갓생 프로젝트에 투입되고, 이들은 다시 한번 자유의 몸을 위해 태어나 처음으로 바른 생활에 도전하게 되는데…  나쁜 녀석들의 사상 초유 바른 생활 갓생 프로젝트가 시작된다!",
+        "release_date": "2022-03-17",
+        "runtime": 100,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 632357,
+    "fields": {
+        "poster_path": "/cFOWiYDQ8Nttmt0K6PU38L48wWK.jpg",
+        "original_title": "The Unholy",
+        "title": "더 언홀리",
+        "tagline": "",
+        "overview": "성모 마리아의 성령을 받은것으로 추정되는 청각 장애 소녀. 앨리스(크리켓 브라운)는 병자들을 듣게 하고 말하게 하고 걷게 하고 치료 할 수 있는 능력을 가진 것으로 소문이 나게 되고, 소문이 퍼지고 근처에 사는 이웃 뿐 아니라 먼 곳의 사람들까지 그녀의 기적을 목격하기 위해 몰려 들게 된다. 이 소식을 들은 한 불명예기자(제프리 딘 모건)는 자신의 명예가 회복 되기를 바라며 조사를 위해 작은 뉴 잉글랜드 마을을 방문하게 된다. 끔찍한 사건이 사방에서 발생하자, 그는 이러한 현상이 성모 마리아의 작품인지 또는 훨씬 더 사악한 것인지 의문을 갖기 시작한다.",
+        "release_date": "2021-03-31",
+        "runtime": 99,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 632727,
+    "fields": {
+        "poster_path": "/xVT66OFGCoHXWEzmapPNS1rFX0J.jpg",
+        "original_title": "Texas Chainsaw Massacre",
+        "title": "텍사스 전기톱 학살 2022",
+        "tagline": "",
+        "overview": "텍사스의 한 유령 도시. 이곳에 생기를 불어넣겠다는 꿈을 안고 도착한 인플루언서들. 이들이 악명 높은 살인마 '살가죽 가면'과 마주친다. 《텍사스 전기톱 학살》의 속편.",
+        "release_date": "2022-02-18",
+        "runtime": 83,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 634649,
+    "fields": {
+        "poster_path": "/voddFVdjUoAtfoZZp2RUmuZILDI.jpg",
+        "original_title": "Spider-Man: No Way Home",
+        "title": "스파이더맨: 노 웨이 홈",
+        "tagline": "무너진 세계, 차원을 뛰어넘는 위협",
+        "overview": "‘미스테리오’의 계략으로 세상에 정체가 탄로난 스파이더맨 ‘피터 파커’는 하루 아침에 평범한 일상을 잃게 된다. 문제를 해결하기 위해 ‘닥터 스트레인지’를 찾아가 도움을 청하지만 뜻하지 않게 멀티버스가 열리면서 각기 다른 차원의 불청객들이 나타난다. ‘닥터 옥토퍼스’를 비롯해 스파이더맨에게 깊은 원한을 가진 숙적들의 강력한 공격에 ‘피터 파커’는 사상 최악의 위기를 맞게 되는데…",
+        "release_date": "2021-12-15",
+        "runtime": 148,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 635302,
+    "fields": {
+        "poster_path": "/m2FNRngyJMyxLatBMJR8pbeG2v.jpg",
+        "original_title": "劇場版「鬼滅の刃」無限列車編",
+        "title": "귀멸의 칼날 극장판 무한열차편",
+        "tagline": "그 칼로 악몽을 끊어라",
+        "overview": "혈귀로 변해버린 여동생 네즈코를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 탄지로. 젠이츠, 이노스케와 새로운 임무 수행을 위해 무한열차에 탑승 후 귀살대 최강 검사 염주 렌고쿠와 합류한다. 달리는 무한열차에서 승객들이 하나 둘 흔적 없이 사라지자 숨어있는 식인 혈귀의 존재를 직감하는 렌고쿠. 귀살대 탄지로 일행과 최강 검사 염주 렌고쿠는 어둠 속을 달리는 무한열차에서 모두의 목숨을 구하기 위해 예측불가능한 능력을 가진 혈귀와 목숨을 건 혈전을 시작하는데...",
+        "release_date": "2020-10-16",
+        "runtime": 117,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 639933,
+    "fields": {
+        "poster_path": "/bfeM8NGWm1riLvvVxHDPLtWCRkF.jpg",
+        "original_title": "The Northman",
+        "title": "노스맨",
+        "tagline": "",
+        "overview": "10세기 아이슬란드, 숙부를 향한 '암레트' 왕자의 복수극을 그린 영화",
+        "release_date": "2022-04-07",
+        "runtime": 137,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 646385,
+    "fields": {
+        "poster_path": "/j2lndg3r6pshxFJyDJZnn50EklS.jpg",
+        "original_title": "Scream",
+        "title": "스크림",
+        "tagline": "아무도 믿어선 안 된다",
+        "overview": "잔혹한 살인 사건으로 우즈보로 마을이 충격에 휩싸인 지 25년이 지난 후,  고스트 페이스를 한 새로운 살인마가 다시 십대들을 노리면서 마을의 어두운 비밀이 다시 수면 위로 떠오르는데…",
+        "release_date": "2022-01-12",
+        "runtime": 114,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 656663,
+    "fields": {
+        "poster_path": "/mlOXyDGxqBGpEmzV9LPQMudMgng.jpg",
+        "original_title": "Jackass Forever",
+        "title": "잭애스 포에버",
+        "tagline": "",
+        "overview": "2000년부터 미국 MTV에서 방영되며 큰 인기를 끌었던 온갖 지저분하고 위험한 장난이 가득한 동명의 쇼 시리즈를 영화화하며 대박을 쳤던 잭애스 더 무비의 20주년을 기념하여 제작된 작품.  원심분리기에 묶여 돌고, 토할 때까지 강제로 음료수를 마시며, 대포에서 발사되는 등 독창적이지만 정신 나간 위험한 게임 속에서 벌어지는 잭애스 크루들의 무모한 도전과 뱀, 꿀벌, 곰, 황소, 전갈, 거대 거미 등의 위험한 동물과 곤충을 이용한 대결이 펼쳐집니다.  실제로 크루의 리더인 조니 낙스빌은 흥분한 황소에 치어 뇌출혈의 부상을 입기도 했다고 합니다.",
+        "release_date": "2022-02-01",
+        "runtime": 96,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 661231,
+    "fields": {
+        "poster_path": "/hPNb2m2jgchIpAoyGauol3wZHub.jpg",
+        "original_title": "Operation Mincemeat",
+        "title": "민스미트 작전",
+        "tagline": "예상을 뛰어 넘는 위대한 작전이 시작된다!",
+        "overview": "사상 최대의 인명 피해를 낳은 제2차 세계대전, 연합군과 추축군은 전쟁을 승리로 이끌 교두보 시칠리아를 두고 팽팽한 대립을 펼친다. 하지만 추축군 독일의 위세가 상당해 시칠리아에는 이미 추축군 병력 무려 23만 명이 주둔해 있던 상황! 연합군은 해군 정보장교 이웬 몬태규와 찰스 첨리를 주축으로 전쟁의 승기를 잡을 단 한 번의 민스미트 작전을 계획하는데…",
+        "release_date": "2022-04-01",
+        "runtime": 128,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 661791,
+    "fields": {
+        "poster_path": "/19rA9FjhwI4VEfaCXV7648XUInR.jpg",
+        "original_title": "La abuela",
+        "title": "La abuela",
+        "tagline": "",
+        "overview": "",
+        "release_date": "2022-01-28",
+        "runtime": 100,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 675353,
+    "fields": {
+        "poster_path": "/8dzKn3RtPWUJRG9ymSpi423eMNV.jpg",
+        "original_title": "Sonic the Hedgehog 2",
+        "title": "수퍼 소닉 2",
+        "tagline": "",
+        "overview": "강력한 파워의 ‘너클즈’와 함께 돌아온 천재 과학자 ‘닥터 로보트닉’에 맞서 지구를 구하기 위해 ‘소닉’과 새로운 파트너 ‘테일즈’가 전 세계를 누비는 스피드 액션 블록버스터.",
+        "release_date": "2022-03-30",
+        "runtime": 122,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 675445,
+    "fields": {
+        "poster_path": "/eCwoA6FoMyvBaO4HB4BzhAKa1Mw.jpg",
+        "original_title": "PAW Patrol: The Movie",
+        "title": "퍼피 구조대 더 무비",
+        "tagline": "퍼피 히어로가 세상을 구한다!",
+        "overview": "시민들을 속여 어드벤처 시티의 시장이 된 날씨 악당 `험딩어`는 취임식 당일, 구름을 조종해 천둥번개를 만드는 등 시민들을 위협하며 본모습을 드러낸다. 그런 가운데, 용감한 시민 퍼피 `리버티`로부터 어드벤처 시티가 위험에 빠진 소식을 들은 퍼피 구조대는 신속하게 시티로 출동하는데…! 위기에 빠진 어드벤처 시티의 운명은?",
+        "release_date": "2021-08-09",
+        "runtime": 88,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 676705,
+    "fields": {
+        "poster_path": "/78JfwRiubwX87BYgPXsdFKBf9P5.jpg",
+        "original_title": "Pil",
+        "title": "Pil",
+        "tagline": "",
+        "overview": "",
+        "release_date": "2021-08-11",
+        "runtime": 89,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 678287,
+    "fields": {
+        "poster_path": "/tvhX4QQnMyMjlFeShLCXovvbf0c.jpg",
+        "original_title": "Marmaduke",
+        "title": "마마듀크",
+        "tagline": "",
+        "overview": "사고뭉치 장난꾸러기 마마듀크. 따뜻한 마음씨를 지녔지만 늘 말썽이 끊이지 않는데. 화려한 도그 쇼 세계에서 빛나는 데 필요한 자질이 과연 마마듀크에게 있을까?",
+        "release_date": "2022-04-28",
+        "runtime": 88,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 691683,
+    "fields": {
+        "poster_path": "/vptZgMA8a65DhlEllwEvrMn0Hfy.jpg",
+        "original_title": "Cheaper by the Dozen",
+        "title": "열두 명의 웬수들",
+        "tagline": "",
+        "overview": "12명의 식구로 이루어진 복합 가정 '베이커 가족'의 시끌벅적한 일상을 다루었던 2003년 코미디 히트작을 리메이크한 작품이다. 개브리엘 유니언과 잭 브래프가 부부 조이와 폴 역할을 맡아, 정신없는 가족생활과 가족 운영 식당을 동시에 꾸려나가는 모습을 그린다. 폴의 달콤하고 향긋한 소스를 곁들인 아침 식사만 제공하는 식당 '베이커스 브렉퍼스트'를 확장하기로 한 뒤, 폴은 가족의 새 보금자리를 교외의 부자 동네에 있는 저택으로 옮기지만, 부부가 예상했던 것 이상으로 이사로 인한 아이들의 스트레스가 크다는 것을 알게 된다. 사랑과 정이 넘쳤던 가족에 위기가 닥치자 폴은 모든 식구의 꿈에 걸맞는 삶을 찾으려고 한다.",
+        "release_date": "2022-03-18",
+        "runtime": 107,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 696806,
+    "fields": {
+        "poster_path": "/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg",
+        "original_title": "The Adam Project",
+        "title": "애덤 프로젝트",
+        "tagline": "",
+        "overview": "시간 여행 중 2022년에 불시착한 전투기 파일럿 애덤 리드. 그가 12살 시절의 자기 자신과 한 팀이 되어 미래를 구하는 임무에 나선다.",
+        "release_date": "2022-03-11",
+        "runtime": 106,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 698508,
+    "fields": {
+        "poster_path": "/sIeWNZkqmMC6gKQMcWvXdXfw6yz.jpg",
+        "original_title": "Amor redentor",
+        "title": "리디밍 러브",
+        "tagline": "사랑이 이끄는 순간, 눈부신 기적이 시작된다!",
+        "overview": "올 봄, 이 사랑이 당신을 꿈꾸게 한다!  누구나 품을 수 있지만, 누구도 소유할 수 없는 ‘엔젤’\r 단 한 번도 원하는 삶을 살아본 적 없던 그녀에게\r 운명처럼 오직 그녀를 사랑하는 남자가 나타난다.\r 무조건적인 그의 사랑에 ‘엔젤’은 매번 도망치지만\r 조금씩, 그리고 천천히 진정한 세상을 알아가는데…",
+        "release_date": "2022-01-21",
+        "runtime": 134,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 752623,
+    "fields": {
+        "poster_path": "/8kZapNBZYGJu7AUbJVBDMmQgO1D.jpg",
+        "original_title": "The Lost City",
+        "title": "로스트 시티",
+        "tagline": "대환장 케미의 그들이 생존하여 섬을 탈출할 수 있을까?",
+        "overview": "전설의 트레저를 차지하기 위해 재벌 페어팩스(다니엘 래드클리프)는  유일한 단서를 알고 있는 베스트셀러 작가 로레타(산드라 블록)를 납치하게 된다.  어쩔 수 없는 비지니스 관계로 사라진 그녀를 찾아야만 하는 책 커버모델 앨런(채닝 테이텀)은  의문의 파트너(브래드 피트)와 함께 위험한 섬에서 그녀를 구하고 무사히 탈출해야만 하는데…  적과 자연의 위험이 도사리는 일촉즉발 화산섬.",
+        "release_date": "2022-03-24",
+        "runtime": 112,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 753232,
+    "fields": {
+        "poster_path": "/paA9xEnHqBVZLElBpPvhTBjmnT.jpg",
+        "original_title": "The Commando",
+        "title": "코만도",
+        "tagline": "건드려서는 안 됐다! 다시 총을 손에 쥔 레전드 특수요원의 올 킬 액션!",
+        "overview": "작전 중 사고로 민간인을 쏜 마약단속국의 특수요원 ‘제임스’는 PTSD에 시달린다.  그런 그의 집에 특수부대 출신의 범죄자 ‘조니’ 일당이 몰래 숨겨놓은 돈을 찾기 위해 찾아온다.  이 사실을 모른 채 ‘제임스’와 아내는 집을 비우고, 남은 두 딸이 그들의 인질이 되어버린다.  모두가 위험에 빠진 순간, ‘제임스’는 가족을 구하기 위해 다시 한번 총을 장전하는데…",
+        "release_date": "2022-01-07",
+        "runtime": 93,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 756187,
+    "fields": {
+        "poster_path": "/g7QxGYWpPDdMsFd4TGQpBo1NXWr.jpg",
+        "original_title": "Sneakerella",
+        "title": "'신'데렐라",
+        "tagline": "",
+        "overview": "퀸스에 사는 열정적인 스니커즈 디자이너인 엘은 자신의 재능을 숨긴 채 신발 가게 창고 직원으로 살아간다. 그러던 어느 날, 우연히 '맨해튼의 차밍 공주'인 키라 킹을 만나면서 마음에 불꽃이 일기 시작한다. 절친의 끈질긴 권유와 알 수 없는 마법의 힘에 용기를 얻은 엘은 마침내 운동화 끈을 졸라매고 원대한 꿈을 좇기로 한다.",
+        "release_date": "2022-05-11",
+        "runtime": 110,
+        "rate_average": 4.0,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 760868,
+    "fields": {
+        "poster_path": "/3WBcQlVTeoLelZghABwmhe4b9C5.jpg",
+        "original_title": "Svart krabba",
+        "title": "블랙 크랩",
+        "tagline": "",
+        "overview": "종말이 찾아온 세상, 여섯 명의 군인에게 극비 임무가 주어진다. 목표는 군도 사이의 얼어붙은 바다를 건너 불가사의한 물건을 운반하는 것.",
+        "release_date": "2022-03-18",
+        "runtime": 109,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 760926,
+    "fields": {
+        "poster_path": "/ejXBuNLvK4kZ7YcqeKqUWnCxdJq.jpg",
+        "original_title": "Gold",
+        "title": "골드",
+        "tagline": "",
+        "overview": "황량한 황무지를 여행하던 두 명의 방랑자가 땅 속에 파묻힌 엄청나게 큰 금덩이를 발견한다. 그들이 가진 장비로는 도저히 금덩이를 캐낼 방법이 없자, 둘 중 한명이 굴삭기를 가져오기 위해 떠나고 한 명이 그동안 홀로 금덩이를 지켜기로 하는데...",
+        "release_date": "2022-01-13",
+        "runtime": 97,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 763285,
+    "fields": {
+        "poster_path": "/t28iy60uX4sRZhKo2MMxCKyQw1a.jpg",
+        "original_title": "Ambulance",
+        "title": "앰뷸런스",
+        "tagline": "LA 도심을 뒤흔든 미친 추격! 멈추면 죽는다",
+        "overview": "인생 역전을 위해 완벽한 범죄를 설계한 형 대니와 아내의 수술비를 마련해야만 하는 동생 윌, 함께 자랐지만 서로 다른 인생을 살아온 두 형제는 각기 다른 목적을 위해 인생을 바꿀 위험한 계획에 뛰어들게 된다. 그러나 한 순간의 잘못된 선택으로 인해 모든 계획이 틀어지게 된 두 형제는 구급대원 캠과 부상당한 경찰이 탑승한 앰뷸런스를 탈취해 LA 역사상 가장 위험한 질주를 하게 되는데....",
+        "release_date": "2022-03-16",
+        "runtime": 136,
+        "rate_average": null,
+        "image_path": null
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 768744,
+    "fields": {
+        "poster_path": "/rqyVJKWCZCWwYK5eDVYyo0jauN6.jpg",
+        "original_title": 

@@ -1,0 +1,337 @@
+[
+{
+    "model": "movies.provider",
+    "pk": 1,
+    "fields": {
+        "provider_name": "Netflix",
+        "address": "https://www.netflix.com/kr/",
+        "logo_path": "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg",
+        "movies": [
+            454626,
+            459151,
+            512195,
+            580489,
+            606402,
+            632357,
+            632727,
+            635302,
+            678287,
+            696806,
+            760868,
+            778106,
+            783461,
+            785985,
+            800937,
+            818647,
+            818750,
+            829557,
+            843241,
+            890656,
+            926899,
+            928381,
+            949270,
+            951470,
+            955971
+        ]
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 2,
+    "fields": {
+        "provider_name": "Amazon Prime Video",
+        "address": "https://www.primevideo.com/",
+        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg",
+        "movies": [
+            294793,
+            585083
+        ]
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 3,
+    "fields": {
+        "provider_name": "Apple iTunes",
+        "address": "https://www.apple.com/kr/itunes/",
+        "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 4,
+    "fields": {
+        "provider_name": "Sun Nxt",
+        "address": "https://www.sunnxt.com/",
+        "logo_path": "/uW4dPCcbXaaFTyfL5HwhuDt5akK.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 5,
+    "fields": {
+        "provider_name": "wavve",
+        "address": "https://www.wavve.com/",
+        "logo_path": "/2ioan5BX5L9tz4fIGU93blTeFhv.jpg",
+        "movies": [
+            860623
+        ]
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 6,
+    "fields": {
+        "provider_name": "Mubi",
+        "address": "https://mubi.com/",
+        "logo_path": "/bVR4Z1LCHY7gidXAJF5pMa4QrDS.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 7,
+    "fields": {
+        "provider_name": "Watcha",
+        "address": "https://watcha.com/",
+        "logo_path": "/vXXZx0aWQtDv2klvObNugm4dQMN.jpg",
+        "movies": [
+            635302,
+            829920
+        ]
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 8,
+    "fields": {
+        "provider_name": "Classix",
+        "address": "https://www.classixapp.com/",
+        "logo_path": "/iaMw6nOyxUzXSacrLQ0Au6CfZkc.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 9,
+    "fields": {
+        "provider_name": "Naver Store",
+        "address": "https://serieson.naver.com/v2/movie",
+        "logo_path": "/a4ciTQc27FsgdUp7PCrToHPygcw.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 10,
+    "fields": {
+        "provider_name": "GuideDoc",
+        "address": "https://guidedoc.tv/",
+        "logo_path": "/iX0pvJ2GFATbVIH5IHMwG0ffIdV.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 11,
+    "fields": {
+        "provider_name": "Argo",
+        "address": "https://watchargo.com/",
+        "logo_path": "/tgKw3lckZULebs3cMLAbMRqir7G.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 12,
+    "fields": {
+        "provider_name": "Eventive",
+        "address": "https://eventive.org/",
+        "logo_path": "/fadQYOyKL0tqfyj012nYJxm3N2I.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 13,
+    "fields": {
+        "provider_name": "Cultpix",
+        "address": "https://www.cultpix.com/",
+        "logo_path": "/59azlQKUgFdYq6QI5QEAxIeecyL.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 14,
+    "fields": {
+        "provider_name": "Apple TV Plus",
+        "address": "https://www.apple.com/kr/apple-tv-plus/",
+        "logo_path": "/6uhKBfmtzFqOcLousHwZuzcrScK.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 15,
+    "fields": {
+        "provider_name": "FilmBox+",
+        "address": "https://www.filmbox.com/",
+        "logo_path": "/4FqTBYsUSZgS9z9UGKgxSDBbtc8.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 16,
+    "fields": {
+        "provider_name": "Curiosity Stream",
+        "address": "https://curiositystream.com/",
+        "logo_path": "/67Ee4E6qOkQGHeUTArdJ1qRxzR2.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 17,
+    "fields": {
+        "provider_name": "Spamflix",
+        "address": "https://spamflix.com/",
+        "logo_path": "/xN97FFkFAdY1JvHhS4zyPD4URgD.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 18,
+    "fields": {
+        "provider_name": "DOCSVILLE",
+        "address": "https://www.docsville.com/",
+        "logo_path": "/bvcdVO7SDHKEa6D40g1jntXKNj.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 19,
+    "fields": {
+        "provider_name": "WOW Presents Plus",
+        "address": "https://www.wowpresentsplus.com/",
+        "logo_path": "/mgD0T960hnYU4gBxbPPBrcDfgWg.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 20,
+    "fields": {
+        "provider_name": "Magellan TV",
+        "address": "https://www.magellantv.com/",
+        "logo_path": "/gekkP93StjYdiMAInViVmrnldNY.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 21,
+    "fields": {
+        "provider_name": "BroadwayHD",
+        "address": "https://www.broadwayhd.com/",
+        "logo_path": "/xLu1rkZNOKuNnRNr70wySosfTBf.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 22,
+    "fields": {
+        "provider_name": "Filmzie",
+        "address": "https://filmzie.com/",
+        "logo_path": "/olmH7t5tEng8Yuq33KmvpvaaVIg.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 23,
+    "fields": {
+        "provider_name": "Dekkoo",
+        "address": "https://www.dekkoo.com/",
+        "logo_path": "/u2H29LCxRzjZVUoZUQAHKm5P8Zc.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 24,
+    "fields": {
+        "provider_name": "True Story",
+        "address": "https://www.truestory.film/",
+        "logo_path": "/osREemsc9uUB2J8VTkQeAVk2fu9.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 25,
+    "fields": {
+        "provider_name": "DocAlliance Films",
+        "address": "https://dafilms.com/",
+        "logo_path": "/aQ1ritN00jXc7RAFfUoQKGAAfp7.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 26,
+    "fields": {
+        "provider_name": "Hoichoi",
+        "address": "https://www.hoichoi.tv/viewplans",
+        "logo_path": "/d4vHcXY9rwnr763wQns2XJThclt.jpg",
+        "movies": []
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 27,
+    "fields": {
+        "provider_name": "Disney Plus",
+        "address": "https://www.disneyplus.com/ko-kr",
+        "logo_path": "/7rwgEs15tFwyR9NPQ5vpzxTj19Q.jpg",
+        "movies": [
+            22,
+            58,
+            285,
+            1865,
+            19995,
+            284052,
+            299536,
+            337404,
+            476669,
+            482321,
+            508943,
+            508947,
+            524434,
+            550988,
+            566525,
+            568124,
+            691683,
+            774825,
+            833425,
+            877183
+        ]
+    }
+},
+{
+    "model": "movies.provider",
+    "pk": 28,
+    "fields": {
+        "provider_name": "Plex",
+        "address": "https://www.plex.tv/",
+        "logo_path": "/wDWvnupneMbY6RhBTHQC9zU0SCX.jpg",
+        "movies": []
+    }
+}
+]

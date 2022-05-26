@@ -1,0 +1,38 @@
+[
+{
+    "model": "movies.rate",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "movie": 955971,
+        "bgm_rate": 5
+    }
+},
+{
+    "model": "movies.rate",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "movie": 955971,
+        "bgm_rate": 3
+    }
+},
+{
+    "model": "movies.rate",
+    "pk": 3,
+    "fields": {
+        "user": 2,
+        "movie": 19995,
+        "bgm_rate": 5
+    }
+},
+{
+    "model": "movies.rate",
+    "pk": 4,
+    "fields": {
+        "user": 2,
+        "movie": 756187,
+        "bgm_rate": 4
+    }
+}
+]
