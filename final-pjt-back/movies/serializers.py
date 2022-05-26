@@ -1,3 +1,4 @@
+from pyexpat import model
 from rest_framework import serializers
 from .models import Movie, Cast, Comment, Provider, Genre, Rate
 from django.contrib.auth import get_user_model
@@ -52,8 +53,29 @@ class RateSerializer(serializers.ModelSerializer):
         fields = ('pk', 'user', 'bgm_rate', 'movie',)
         read_only_fields = ('movie', )
 
+
+class CastSerailizer(serializers.ModelSerializer):
+    
+    # class MovieSerializer(serializers.ModelSerializer):
+    #     class Meta:
+    #         model = Movie
+    #         fields = '__all__'
+    
+    # movie = MovieSerializer(read_only=True)
+
+    class Meta:
+        model = Cast
+        fields = ('actor_name', 'character', 'movie',)
+        read_only_fields = ('movie',)
+
+
 class MovieSerializer(serializers.ModelSerializer):
 
+    class CastSerializer(serializers.ModelSerializer):
+        model = Cast
+        fields = '__all__'
+
+    casts = CastSerailizer(many=True, read_only=True)
     providers = ProviderSerializer(many=True, read_only=True)
     genres = GenreSerializer(many=True, read_only=True)
     comments = CommentSerializer(many=True, read_only=True)
@@ -62,16 +84,3 @@ class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
         fields = '__all__'
-
-class CastSerailizer(serializers.ModelSerializer):
-    
-    class MovieSerializer(serializers.ModelSerializer):
-        class Meta:
-            model = Movie
-            fields = '__all__'
-    
-    movie = MovieSerializer(read_only=True)
-
-    class Meta:
-        model = Cast
-        fields = ('actor_name', 'character', 'movie',)

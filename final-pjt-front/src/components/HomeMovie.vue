@@ -60,4 +60,11 @@ export default {
   position: relative;
   top: 13em; 
 }
+
+.card-text{
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
 </style>

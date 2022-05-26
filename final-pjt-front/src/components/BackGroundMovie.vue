@@ -195,5 +195,9 @@ export default {
 </script>
 
 <style>
-
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: contain;
+}
 </style>
