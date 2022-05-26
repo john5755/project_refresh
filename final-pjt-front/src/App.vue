@@ -59,5 +59,15 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 
-body{background:rgb(10, 28, 38)}
+  @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+body{
+  
+  background:rgb(10, 28, 38);
+}
+
+body,body*{
+  
+  font-family: 'Black Han Sans', sans-serif;
+}
+
 </style>
