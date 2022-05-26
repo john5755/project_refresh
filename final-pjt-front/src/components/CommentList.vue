@@ -1,7 +1,9 @@
 <template>
   <div class="comment-list">
     
+    <comment-list-form></comment-list-form>
     <ul>
+      <hr>
       <comment-list-item 
         v-for="comment in comments" 
         :comment="comment" 
@@ -9,7 +11,6 @@
       </comment-list-item>        
     </ul>
 
-    <comment-list-form></comment-list-form>
   </div>
 </template>
 
@@ -27,7 +28,7 @@ export default {
 </script>
 
 <style>
-.comment-list {
-  border: 1px solid blue;
-}
+/* .comment-list {
+  border: 1px solid #525252;
+} */
 </style>
