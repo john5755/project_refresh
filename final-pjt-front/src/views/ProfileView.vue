@@ -92,18 +92,23 @@ export default {
   components : {
     SignupForm,
   },
-  data(){
-    return {
-      payload2:{
-        userPk : this.$store.getters.profile.pk,
-        partnerPk : this.$store.getters.profile.partner_id,
-      },
-    }
-  },
+  // data(){
+  //   return {
+  //     payload2:{
+  //       userPk : this.$store.getters.profile.pk,
+  //       partnerPk : this.$store.getters.profile.partner_id,
+  //     },
+  //   }
+  // },
   computed: {
     ...mapGetters(['profile']),
     // ...mapState(['userPk'])
-
+    payload2(){
+      return{
+        userPk : this.profile.pk,
+        partnerPk: this.profile.partner_id
+      }
+    }
   },
   methods: {
     ...mapActions(['fetchProfile','deleteUser','resetHistory']),

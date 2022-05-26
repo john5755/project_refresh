@@ -149,6 +149,7 @@ import { mapActions, mapGetters } from 'vuex'
     },
     created() {
       this.fetchMovies()
+
     },
   }
 </script>

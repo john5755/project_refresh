@@ -150,7 +150,6 @@
   import CommentList from '@/components/CommentList.vue'
 
 
-
   export default {
     name: 'MovieDetail',
     // components: { CommentList },
@@ -172,8 +171,9 @@
       //   return this.article.like_users?.length
       // }
       rate(){
+        if(this.movie.rate_average){
         return this.movie.rate_average.toFixed(2)
-      }
+      } else {return 0}}
     },
     methods: {
       ...mapActions([

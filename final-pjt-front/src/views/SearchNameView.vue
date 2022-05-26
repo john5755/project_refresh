@@ -32,10 +32,6 @@ export default {
   //   ...mapActions(['fetchCharMovies'])
   // },
 
-  // created(){
-  //   const query = this.$route.params.query
-  //   this.fetchCharMovies(query)
-  // }
 }
 </script>
 
