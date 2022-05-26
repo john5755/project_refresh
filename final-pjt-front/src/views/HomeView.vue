@@ -8,7 +8,8 @@
                         'filter': 'brightness(88%)'}" 
                 id="background1"
                 class="justify-content-center d-flex">
-            <div class="card mb-3 row-2" style="max-width: 540px;" id="first">
+            <h1 class="mt-5">TOP 5 BACK GROUND MOVIE</h1>
+            <div class="card mb-3 row-2 homeback" style="max-width: 540px;" id="first">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img :src="tmdb+first_movie.poster_path" class="img-fluid rounded-start" alt="...">

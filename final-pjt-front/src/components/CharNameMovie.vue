@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>내 이름의 배역이 나오는 영화</h2>
+    <h2 class="my-5">내 이름의 배역이 나오는 영화</h2>
     <div id="multi-item-example" class="carousel slide carousel-multi-item d-flex justify-content-center" data-bs-ride="carousel">
       <!--Controls-->
       <div class="controls-top">
@@ -32,7 +32,7 @@
                   <p class="card-text">{{ firstMovie.overview }} </p>
                   <div v-for="(cast, idx) in firstMovie.casts" :key="idx">
                     <p v-if="cast.character.includes(query) || cast.character.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이{{ cast.character }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -54,7 +54,7 @@
                   <p class="card-text">{{ movie.overview }} </p>
                   <div v-for="(cast, idx) in movie.casts" :key="idx">
                     <p v-if="cast.character.includes(query) || cast.character.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이{{ cast.character }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -82,7 +82,7 @@
                   <p class="card-text">{{ secondMovie.overview }} </p>
                   <div v-for="(cast, idx) in secondMovie.casts" :key="idx">
                     <p v-if="cast.character.includes(query) || cast.character.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이{{ cast.character }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -104,7 +104,7 @@
                   <p class="card-text">{{ movie.overview }}</p>
                   <div v-for="(cast, idx) in movie.casts" :key="idx">
                     <p v-if="cast.character.includes(query) || cast.character.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이{{ cast.character }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -132,7 +132,7 @@
                   <p class="card-text">{{ thirdMovie.overview }} </p>
                   <div v-for="(cast, idx) in thirdMovie.casts" :key="idx">
                     <p v-if="cast.character.includes(query) || cast.character.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이{{ cast.character }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>               
                     <router-link 
@@ -154,7 +154,7 @@
                   <p class="card-text">{{ movie.overview }} </p>
                   <div v-for="(cast, idx) in movie.casts" :key="idx">
                     <p v-if="cast.character.includes(query) || cast.character.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이{{ cast.character }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -269,6 +269,7 @@ export default {
   overflow-y: scroll; 
   overflow-x: hidden; 
   border: 1px solid #ddd;
+  background-color: rgb(46, 69, 89);
 }
 
 .page::after { 
@@ -291,7 +292,7 @@ export default {
 }
     
 .wrapper::-webkit-scrollbar-thumb {
-    background-color: red;
+    background-color: rgb(143, 203, 217);
     border-right: none;
     border-left: none;
 }
@@ -301,8 +302,7 @@ export default {
     margin-bottom: 10px; 
 }
 
-img {
-    aspect-ratio: 5/3;
+.card-img-top{
     width: 100%;
 
     object-fit: cover;

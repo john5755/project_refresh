@@ -31,13 +31,13 @@ def movie_detail(request, movie_id):
 
 @api_view(['POST'])
 def create_rating(request, movie_pk):
-    print(request.data)
     user = request.user
     movie = get_object_or_404(Movie, movie_id=movie_pk)
     
     
     serializer = RateSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
+        # Rate.objects.filter(user=user).delete()
         serializer.save(movie=movie, user=user)
         rate_average = Rate.objects.filter(movie=movie).aggregate(Avg('bgm_rate'))['bgm_rate__avg']
         movie.rate_average = rate_average
