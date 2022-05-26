@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h2>배경으로 좋은 영화</h2>
+    <h2 class="mb-4">배경으로 좋은 영화</h2>
+    <hr>
     <div id="multi-item-example" class="carousel slide carousel-multi-item" data-bs-ride="carousel">
       <!--Controls-->
       <div class="controls-top">
@@ -23,11 +24,11 @@
         <div class="carousel-item active">
 
           <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-2">
+            <div class="col-md-3 page">
+              <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+firstMovie.poster_path"
                     alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body content">
                   <h4 class="card-title">{{ firstMovie.title }}</h4>
                   <p class="card-text">{{ firstMovie.overview }} </p>
                     <router-link 
@@ -39,12 +40,12 @@
               </div>
             </div>
 
-            <div class="col-md-4 clearfix d-none d-md-block"
+            <div class="col-md-3 clearfix d-none d-md-block page"
                   v-for="movie in forFirstMovies" :key="movie.movie_id">
-              <div class="card mb-2">
+              <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+movie.poster_path"
                     alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body content">
                   <h4 class="card-title">{{ movie.title }}</h4>
                   <p class="card-text">{{ movie.overview }} </p>
                     <router-link 
@@ -63,11 +64,11 @@
         <div class="carousel-item">
 
           <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-2">
+            <div class="col-md-3 page">
+              <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+secondMovie.poster_path"
                     alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body content">
                   <h4 class="card-title">{{ secondMovie.title }}</h4>
                   <p class="card-text">{{ secondMovie.overview }} </p>
                     <router-link 
@@ -79,12 +80,12 @@
               </div>
             </div>
 
-            <div class="col-md-4 clearfix d-none d-md-block"
+            <div class="col-md-3 clearfix d-none d-md-block page"
                   v-for="movie in forSecondMovies" :key="movie.movie_id">
-              <div class="card mb-2">
+              <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+movie.poster_path"
                     alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body content">
                   <h4 class="card-title">{{ movie.title }}</h4>
                   <p class="card-text">{{ movie.overview }}</p>
                     <router-link 
@@ -103,11 +104,11 @@
         <div class="carousel-item">
 
           <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-2">
+            <div class="col-md-3 page">
+              <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+thirdMovie.poster_path"
                     alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body content">
                   <h4 class="card-title">{{ thirdMovie.title }}</h4>
                   <p class="card-text">{{ thirdMovie.overview }} </p>
                     <router-link 
@@ -119,12 +120,12 @@
               </div>
             </div>
 
-            <div class="col-md-4 clearfix d-none d-md-block"
+            <div class="col-md-3 clearfix d-none d-md-block page"
                   v-for="movie in forThirdMovies" :key="movie.movie_id">
-              <div class="card mb-2">
+              <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+movie.poster_path"
                     alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body content">
                   <h4 class="card-title">{{ movie.title }}</h4>
                   <p class="card-text">{{ movie.overview }} </p>
                     <router-link 
@@ -137,7 +138,9 @@
             </div>
           </div>
         </div>
-        <!--/.Second slide-->
+        <!--/.Third slide-->
+
+
 
       <!-- <li>{{ groundMovie.title }}</li>
       <li>{{ groundMovie.tagline }}</li>
@@ -172,19 +175,19 @@ export default {
       return this.groundMovies[0]
     },  
     forFirstMovies (){
-      return this.groundMovies.slice(1,3)
+      return this.groundMovies.slice(1,4)
     },
     secondMovie(){
-      return this.groundMovies[3]
+      return this.groundMovies[4]
     },
     forSecondMovies (){
-      return this.groundMovies.slice(4,6)
+      return this.groundMovies.slice(5,8)
     },
     thirdMovie(){
-      return this.groundMovies[6]
+      return this.groundMovies[8]
     },
     forThirdMovies(){
-      return this.groundMovies.slice(7,9)
+      return this.groundMovies.slice(9,12)
     }
   },
   props: {

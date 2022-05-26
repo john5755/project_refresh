@@ -97,7 +97,7 @@ def comment_update_or_delete(request, movie_pk, comment_pk):
 @api_view(['GET'])
 def music_list(request):
     movies = Movie.objects.filter(genres__id=12)
-    movies = movies.order_by('-rate_average')[:10]
+    movies = movies.distinct().order_by('-rate_average')[:12]
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
 
@@ -136,7 +136,7 @@ def ground_list(request):
     movies = Movie.objects.exclude(genres__id=user_genre_pk).exclude(genres__id=partner_genre_pk)
     for month in monthes:
         movies = movies.exclude(release_date__contains=month)
-    movies = movies.order_by(F('rate_average').desc(nulls_last=True))[:10]
+    movies = movies.distinct().order_by(F('rate_average').desc(nulls_last=True))[:12]
     
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
@@ -152,9 +152,9 @@ def ground_list(request):
 @api_view(['GET'])
 def character(request, character):
     character = character + ' '
-    casts = Cast.objects.filter(character__contains=character)
+    casts = Cast.objects.filter(character__contains=character).distinct()
     movies = Movie.objects.filter(casts__in=casts)
-    movies = movies.order_by('-rate_average')[:10]
+    movies = movies.distinct().order_by('-rate_average')[:12]
     serializer = MovieSerializer(movies, many=True)
     return Response(serializer.data)    
 
@@ -163,7 +163,7 @@ def actorname(request, actorname):
     actorname = actorname + ' '
     casts = Cast.objects.filter(actor_name__contains=actorname)
     movies = Movie.objects.filter(casts__in=casts)
-    movies = movies.order_by('-rate_average')[:10]
+    movies = movies.distinct().order_by('-rate_average')[:12]
     serializer = MovieSerializer(movies, many=True)
     return Response(serializer.data)
 

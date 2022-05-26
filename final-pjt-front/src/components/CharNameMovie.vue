@@ -23,7 +23,7 @@
         <div class="carousel-item active">
 
           <div class="row">
-            <div class="col-md-4 page">
+            <div class="col-md-3 page">
               <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+firstMovie.poster_path"
                     alt="Card image cap">
@@ -44,7 +44,7 @@
               </div>
             </div>
 
-            <div class="col-md-4 clearfix d-none d-md-block page"
+            <div class="col-md-3 clearfix d-none d-md-block page"
                   v-for="movie in forFirstMovies" :key="movie.movie_id">
               <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+movie.poster_path"
@@ -73,7 +73,7 @@
         <div class="carousel-item" v-if="secondMovie">
 
           <div class="row">
-            <div class="col-md-4 page">
+            <div class="col-md-3 page">
               <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+secondMovie.poster_path"
                     alt="Card image cap">
@@ -94,7 +94,7 @@
               </div>
             </div>
 
-            <div class="col-md-4 clearfix d-none d-md-block page"
+            <div class="col-md-3 clearfix d-none d-md-block page"
                   v-for="movie in forSecondMovies" :key="movie.movie_id">
               <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+movie.poster_path"
@@ -123,7 +123,7 @@
         <div class="carousel-item" v-if="thirdMovie">
 
           <div class="row">
-            <div class="col-md-4 page">
+            <div class="col-md-3 page">
               <div class="card mb-2 wrapper">
                 <img class="card-img-top block" :src="tmdb+thirdMovie.poster_path"
                     alt="Card image cap">
@@ -144,7 +144,7 @@
               </div>
             </div>
 
-            <div class="col-md-4 clearfix d-none d-md-block page"
+            <div class="col-md-3 clearfix d-none d-md-block page"
                   v-for="movie in forThirdMovies" :key="movie.movie_id">
               <div class="card mb-2 wrapper">
                 <img class="card-img-top" :src="tmdb+movie.poster_path"
@@ -202,19 +202,19 @@ export default {
       return this.charMovies[0]
     },  
     forFirstMovies (){
-      return this.charMovies.slice(1,3)
+      return this.charMovies.slice(1,4)
     },
     secondMovie(){
-      return this.charMovies[3]
+      return this.charMovies[4]
     },
     forSecondMovies (){
-      return this.charMovies.slice(4,6)
+      return this.charMovies.slice(5,8)
     },
     thirdMovie(){
-      return this.charMovies[6]
+      return this.charMovies[8]
     },
     forThirdMovies(){
-      return this.charMovies.slice(7,9)
+      return this.charMovies.slice(9,12)
     },
     query(){
       return this.$route.params.query
@@ -253,7 +253,7 @@ export default {
 
 .page { 
   position: relative;
-  width: 25vw; 
+  width: 23vw; 
   height: 50vh;
 }
 
@@ -306,6 +306,6 @@ img {
     width: 100%;
 
     object-fit: cover;
-    object-position: left;
+    object-position: center;
 }
 </style>

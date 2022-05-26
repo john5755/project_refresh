@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mt-5">
     <back-ground-movie
     :groundMovies="groundMovies"></back-ground-movie>
     <back-music-movie

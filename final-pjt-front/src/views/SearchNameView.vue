@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container mt-5">
   <h1>SEARCH</h1>
   <name-search-form></name-search-form>
   <div v-if="now">
