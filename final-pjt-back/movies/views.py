@@ -200,7 +200,7 @@ def download(request):
     
 
     movie_ids = []
-    for page in range(6,1000):
+    for page in range(49,1000):
         params = {
             'api_key' : api_key,
             'language' : 'ko',
@@ -209,7 +209,7 @@ def download(request):
         # 요청보내고 결과 저장하기
         response = requests.get(BASE_URL + path, params = params)
         data = response.json()
-        movies = data['results']
+        movies = data.get('results',[])
 
         for movie in movies:
             movie_ids.append(movie['id'])
@@ -222,14 +222,14 @@ def download(request):
         }
         response = requests.get(BASE_URL + path_detail, params = params_detail)
         movie = response.json()
-        poster_path = movie['poster_path']
-        overview = movie['overview']
+        poster_path = movie.get('poster_path', 'no_poster')
+        overview = movie.get('overview', 'not_over_view')
         movie_id = movie['id']
-        original_title = movie['original_title']
-        title = movie['title']
-        tagline = movie['tagline']
-        release_date = movie['release_date']
-        runtime = movie['runtime']
+        original_title = movie.get('original_title', 'not_original_title')
+        title = movie.get('title', 'title')
+        tagline = movie.get('tagline', 'no_tag_line')
+        release_date = movie.get('release_date', 'not_release')
+        runtime = movie.get('runtime', '1')
         movie_now = Movie(
             movie_id = movie_id,
             poster_path = poster_path,
@@ -241,10 +241,12 @@ def download(request):
             release_date = release_date
         )
         movie_now.save()
-        for genre in movie['genres']:
-            genre_name = Genre.objects.get(genre_name=genre['name'])
-            genre_name.movies.add(movie_now)
-            genre_name.save()
+
+        if movie['genres']:
+            for genre in movie['genres']:
+                genre_name = Genre.objects.get(genre_name=genre['name'])
+                genre_name.movies.add(movie_now)
+                genre_name.save()
 
 '''
         for provider in providers:
@@ -266,7 +268,7 @@ def cast(request):
         movie_id = movie.movie_id
         path = f'/movie/{movie_id}/credits'
         response = requests.get(BASE_URL + path, params = params)
-        casts = response.json()['cast']
+        casts = response.json().get('cast',[])
         for cast in casts:
             actor_name = cast['original_name']
             character = cast['character']
