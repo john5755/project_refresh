@@ -25,71 +25,89 @@
 
     </star-rating> -->
     
+    <!-- :style="`background-image:url(${tmdb+movie.poster_path}); overflow:hidden;`" -->
     
     
     
     
-    <!-- 틀 -->
+  
     <div class="my-5">
-      <hr>
+
     </div>
     <div class="container">
       <div class="">
         
         <!-- poster & provider -->
         <div class="row row-cols-1 row-cols-sm-2 " name="poster-provider" >
-          <!-- :style="`background-image:url(${tmdb+movie.poster_path}); overflow:hidden;`" -->
+            
+            <!-- 왼쪽 (포스터 별점 OTT) -->
             <div class="col poster container">
                 <img :src="tmdb+movie.poster_path" class="row-8 poster">
-  
-                <div class="row-2">
-                  <div class="col">
-                    <h3>BGM RATES:{{movie.rate_average}}</h3>
-                  </div>
+                
+                <!-- bgmRate/starRate/Watch on/ -->
+                <div class="row-2 row-cols-sm-2 container">
                   <star-rating 
                       v-model='rating'
                       v-bind:increment="1"
                       v-bind:max-rating="5"
                       @rating-selected = "setRating"
+                      class="col"
                       >
                       
                   </star-rating>
+                  
+                  
                 </div>
-                <div class="row-2">
-                 <h3>WATCH ON</h3>
-                 <div v-for= 'provider in movie.providers' :key='provider.provider_name'>
+                <div class="row-2 d-flex align-items-center">
+                  
+                    <div class="col-5 text-start"><h5><b>&nbsp;&nbsp;&nbsp;WATCH ON</b></h5></div>
+                    <div class="col-7 text-start my-2 mx-4" v-for= 'provider in movie.providers' :key='provider.provider_name'>
+                      <a :href="provider.address">
+                      <img :src="tmdb+provider.logo_path" alt="logo" width="50" height="50">
+                      </a>
+                    </div>
+                    <!-- <div class="col-8">d </div> -->
+                 
+                <!-- <div class="col-6"></div>
+                <div class="col-6" v-for= 'provider in movie.providers' :key='provider.provider_name'>
                   <a :href="provider.address">
                     <img :src="tmdb+provider.logo_path" alt="logo" width="50" height="50">
                   </a>
-                 </div>
+                </div> -->
+                
                 </div>
             
             </div>
           
           <!-- title&star&overview -->  
-            <div class="col">
+            <div class="col detail">
               <div class="row">
-                <h1>{{movie.title}}</h1>
+                <hr>
+                <h1 class="fw-bold">{{movie.title}}</h1>
               </div>
               <div class="row">
                 <h5>{{movie.original_title}}</h5>
               </div>
               <div class="row">
-                <h5>{{movie.release_date}}</h5>
+                <hr>
+                <h5 class="text-start">BGM RATES{{movie.rate_average}}</h5>
               </div>
+              <hr>
               <div class="row">
-                <h5>{{movie.runtime}}</h5>
+                <div class="col">
+                  <h5 class="text-start">상영시간 : {{movie.runtime}}분</h5>
+                  <h5 class="text-start">개봉일 : {{movie.release_date}}</h5>
+                  <h5 class="text-start" v-for="genre in movie.genres" :key='genre.genre_name'>장르 : {{genre.genre_name}}</h5>
+                </div>
+                <div class="col">
+                </div>
               </div>
-              <div class="row">
-                <h5 v-for="genre in movie.genres" :key='genre.genre_name'>{{genre.genre_name}}</h5>
-              </div>
+              
+              
                 <hr>
               <div class="row">
-                <h3>{{movie.overview}}</h3>
+                <h3 class="text-start">{{movie.overview}}</h3>
               </div>
-              
-              
-            
             </div>
         </div>
         
@@ -169,6 +187,17 @@
 .vw-100{
   width: 100vw;
 }
+.star {
+  flex-shrink:0;
+  flex-grow:0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+.detail{
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+
 
     
 
