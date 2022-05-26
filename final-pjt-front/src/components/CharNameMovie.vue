@@ -301,8 +301,7 @@ export default {
     margin-bottom: 10px; 
 }
 
-img {
-    aspect-ratio: 5/3;
+.card-img-top{
     width: 100%;
 
     object-fit: cover;
