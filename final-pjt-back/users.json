@@ -1,0 +1,134 @@
+[
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$O3KJ8Ry2uW4IF1Ot5aMTx3$BgTscxaHhlE1TP2swI8pN8WVNUDQSaIlhGTp/N09Th4=",
+        "last_login": "2022-05-23T16:10:02.144Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-05-21T03:42:36.988Z",
+        "partner_id": null,
+        "favorite_genre": null,
+        "favorite_season": null,
+        "groups": [],
+        "user_permissions": [],
+        "providers": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$jzTlhmPMvx3OkuNJfFlrC7$5TeE2kaKIe8Kaz0TVqtquWB2PnA8wg57ex3274x+6Co=",
+        "last_login": "2022-05-23T16:10:04.224Z",
+        "is_superuser": true,
+        "username": "admin2",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-05-21T03:42:57.538Z",
+        "partner_id": null,
+        "favorite_genre": null,
+        "favorite_season": null,
+        "groups": [],
+        "user_permissions": [],
+        "providers": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$Xc3OxKLD0BATrFwbS5b9G3$hHK1EhQPGdlu30ASMrhbzU3rsfOitsW/oxhcIJ91+3E=",
+        "last_login": "2022-05-23T13:13:28.840Z",
+        "is_superuser": true,
+        "username": "adminn",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-05-23T06:45:09.161Z",
+        "partner_id": null,
+        "favorite_genre": null,
+        "favorite_season": null,
+        "groups": [],
+        "user_permissions": [],
+        "providers": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$5WM8r6NzrHtEmIuegFhRb8$YqaZdqgMAX7P5np3de31oAP2hjdM07nW5JS+OeGy+rc=",
+        "last_login": "2022-05-26T15:32:33.147Z",
+        "is_superuser": false,
+        "username": "genre",
+        "first_name": "g",
+        "last_name": "r",
+        "email": "f@f.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-23T13:35:05.077Z",
+        "partner_id": 5,
+        "favorite_genre": "액션",
+        "favorite_season": "봄",
+        "groups": [],
+        "user_permissions": [],
+        "providers": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$XfSYYko30ZXRXX1PL1wIlw$bEdM+UcTlrWE4ZAH+oCIwdTqshKKwx2uWzsvdMnf7s8=",
+        "last_login": "2022-05-26T15:32:39.542Z",
+        "is_superuser": false,
+        "username": "genre2",
+        "first_name": "Tk",
+        "last_name": "vl",
+        "email": "ffff@llll.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-23T13:36:13.571Z",
+        "partner_id": 4,
+        "favorite_genre": "공포",
+        "favorite_season": "여름",
+        "groups": [],
+        "user_permissions": [],
+        "providers": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$yPlzFhPEpQc5JKMR3Mb2wK$6j4GvHtyPwYCdcoolI0Z6EEWqN+/zxC3ziCznHKMK+g=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "sleep",
+        "first_name": "Tk",
+        "last_name": "Vl",
+        "email": "ffdf@foood.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-23T15:37:40.641Z",
+        "partner_id": null,
+        "favorite_genre": "애니메이션",
+        "favorite_season": "가을",
+        "groups": [],
+        "user_permissions": [],
+        "providers": []
+    }
+}
+]
