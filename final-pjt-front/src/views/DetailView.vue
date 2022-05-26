@@ -43,7 +43,7 @@
             <!-- 왼쪽 (포스터 별점 OTT) -->
             <div class="col poster container">
                 <img :src="tmdb+movie.poster_path" class="row-8 poster">
-                
+                <hr>
                 <!-- bgmRate/starRate/Watch on/ -->
                 <div class="row-2 row-cols-sm-2 container">
                   <star-rating 
@@ -56,8 +56,9 @@
                       
                   </star-rating>
                   
-                  
+                 
                 </div>
+                <hr>
                 <div class="row-2 d-flex align-items-center">
                   
                     <div class="col-5 text-start"><h5><b>&nbsp;&nbsp;&nbsp;WATCH ON</b></h5></div>
@@ -97,7 +98,12 @@
                 <div class="col">
                   <h5 class="text-start">상영시간 : {{movie.runtime}}분</h5>
                   <h5 class="text-start">개봉일 : {{movie.release_date}}</h5>
-                  <h5 class="text-start" v-for="genre in movie.genres" :key='genre.genre_name'>장르 : {{genre.genre_name}}</h5>
+                  <div class="row">
+                    <div class="col-3"><h4 class="text-start" >장르:</h4></div>
+                    <div class="col-9">
+                      <h5 class="text-start" v-for="genre in movie.genres" :key='genre.genre_name'>{{genre.genre_name}}</h5>
+                    </div>    
+                  </div>
                 </div>
                 <div class="col">
                 </div>
@@ -120,6 +126,10 @@
 
         
         <!-- overview -->
+        <br>
+        <hr class="hr-height">
+        <br>
+        <br>
         <div class="row">
           <comment-list :comments="movie.comments">
           </comment-list> 
@@ -191,7 +201,11 @@
   flex-shrink:0;
   flex-grow:0;
 }
-
+.hr-height {
+  border:1;
+  height: 5px;
+  background : #525252;
+}
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 .detail{
   font-family: 'Black Han Sans', sans-serif;

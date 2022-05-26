@@ -37,12 +37,14 @@ export default {
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Black Han Sans', sans-serif, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color : #BEB9B9  ;
+  /* color: #2c3e50; */
   height: 100vh;
 }
 
