@@ -91,7 +91,8 @@
               </div>
               <div class="row">
                 <hr>
-                <h5 class="text-start">BGM RATES{{movie.rate_average}}</h5>
+                <h5 class="text-start">BGM RATES&nbsp;&nbsp;&nbsp;</h5>
+                <h1 class="text-start">{{movie.rate_average}}</h1>
               </div>
               <hr>
               <div class="row">
