@@ -39,7 +39,7 @@
               </div>
             </div>
 
-            <!-- <div class="col-md-4 clearfix d-none d-md-block"
+            <div class="col-md-4 clearfix d-none d-md-block"
                   v-for="movie in forFirstMovies" :key="movie.movie_id">
               <div class="card mb-2">
                 <img class="card-img-top" :src="tmdb+movie.poster_path"
@@ -54,7 +54,7 @@
                     </router-link>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
         <!--/.First slide-->
@@ -195,5 +195,11 @@ export default {
 </script>
 
 <style>
+
+.card-img-top {
+    width: 150%;
+    height: 30vw;
+    object-fit: contain;
+}
 
 </style>

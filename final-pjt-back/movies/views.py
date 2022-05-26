@@ -18,7 +18,7 @@ User = get_user_model()
 @api_view(['GET'])
 def movie_list(request):
     # movies = get_list_or_404(Movie)[:5]
-    movies = Movie.objects.order_by('-pk')[:5]
+    movies = Movie.objects.order_by('-rate_average')[:5]
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
 
@@ -96,7 +96,8 @@ def comment_update_or_delete(request, movie_pk, comment_pk):
 
 @api_view(['GET'])
 def music_list(request):
-    movies = Movie.objects.filter(genres__id=12)[:10]
+    movies = Movie.objects.filter(genres__id=12)
+    movies = movies.order_by('-rate_average')[:10]
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
 
@@ -140,21 +141,30 @@ def ground_list(request):
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
 
+# @api_view(['GET'])
+# def character(request, character):
+#     character = character + ' '
+#     casts = Cast.objects.filter(character__contains=character)
+#     casts = casts.order_by(F('movie__rate_average').desc(nulls_last=True))[:10]
+#     serializer = CastSerailizer(casts, many=True)
+#     return Response(serializer.data)
+
 @api_view(['GET'])
 def character(request, character):
     character = character + ' '
     casts = Cast.objects.filter(character__contains=character)
-    casts = casts.order_by(F('movie__rate_average').desc(nulls_last=True))[:10]
-    serializer = CastSerailizer(casts, many=True)
-    return Response(serializer.data)
-
+    movies = Movie.objects.filter(casts__in=casts)
+    movies = movies.order_by('-rate_average')[:10]
+    serializer = MovieSerializer(movies, many=True)
+    return Response(serializer.data)    
 
 @api_view(['GET'])
 def actorname(request, actorname):
     actorname = actorname + ' '
     casts = Cast.objects.filter(actor_name__contains=actorname)
-    casts = casts.order_by(F('movie__rate_average').desc(nulls_last=True))[:10]
-    serializer = CastSerailizer(casts, many=True)
+    movies = Movie.objects.filter(casts__in=casts)
+    movies = movies.order_by('-rate_average')[:10]
+    serializer = MovieSerializer(movies, many=True)
     return Response(serializer.data)
 
 

@@ -199,4 +199,11 @@ import { mapActions, mapGetters } from 'vuex'
   width: 100px;
 } */
 
+.card-text{
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
 </style>
