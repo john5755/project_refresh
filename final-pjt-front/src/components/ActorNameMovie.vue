@@ -32,7 +32,7 @@
                   <p class="card-text">{{ firstMovie.overview }} </p>
                   <div v-for="(cast, idx) in firstMovie.casts" :key="idx">
                     <p v-if="cast.actor_name.includes(query) || cast.actor_name.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.actor_name }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -54,7 +54,7 @@
                   <p class="card-text">{{ movie.overview }} </p>
                   <div v-for="(cast, idx) in movie.casts" :key="idx">
                     <p v-if="cast.actor_name.includes(query) || cast.actor_name.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.actor_name }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -82,7 +82,7 @@
                   <p class="card-text">{{ secondMovie.overview }} </p>
                   <div v-for="(cast, idx) in secondMovie.casts" :key="idx">
                     <p v-if="cast.actor_name.includes(query) || cast.actor_name.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.actor_name }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -104,7 +104,7 @@
                   <p class="card-text">{{ movie.overview }}</p>
                   <div v-for="(cast, idx) in movie.casts" :key="idx">
                     <p v-if="cast.actor_name.includes(query) || cast.actor_name.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.actor_name }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -132,7 +132,7 @@
                   <p class="card-text">{{ thirdMovie.overview }} </p>
                   <div v-for="(cast, idx) in thirdMovie.casts" :key="idx">
                     <p v-if="cast.actor_name.includes(query) || cast.actor_name.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.actor_name }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
@@ -154,7 +154,7 @@
                   <p class="card-text">{{ movie.overview }} </p>
                   <div v-for="(cast, idx) in movie.casts" :key="idx">
                     <p v-if="cast.actor_name.includes(query) || cast.actor_name.includes(capitalizeStirng(query))">
-                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.actor_name }}역할을 합니다.
+                      {{ cast.actor_name }}이(가)&nbsp;{{ cast.character }}역할을 합니다.
                     </p>
                   </div>
                     <router-link 
